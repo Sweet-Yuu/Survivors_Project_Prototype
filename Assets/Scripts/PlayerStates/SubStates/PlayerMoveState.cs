@@ -1,3 +1,4 @@
+using UnityEditor.Tilemaps;
 using UnityEngine;
 
 public class PlayerMoveState : PlayerGroundedState
@@ -24,6 +25,26 @@ public class PlayerMoveState : PlayerGroundedState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
+
+        Vector2 input = player.InputHandler.movementInput;
+
+        player.Movement.Move(input);
+
+        if (input != Vector2.zero)
+        {
+            player.LastInput = input;
+        }
+
+        player.Anim.SetFloat("InputX", input.x);
+        player.Anim.SetFloat("InputY", input.y);
+
+        player.Anim.SetFloat("lastInputX", player.LastInput.x);
+        player.Anim.SetFloat("lastInputY", player.LastInput.y);
+
+        player.Anim.SetFloat("speed", input.magnitude);
+
+       
+
         if (input == Vector2.zero)
         {
             stateMachine.ChangeState(player.IdleState);
@@ -33,6 +54,7 @@ public class PlayerMoveState : PlayerGroundedState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-        player.Move(input);
+        player.Movement.Move(input);
+        
     }
 }

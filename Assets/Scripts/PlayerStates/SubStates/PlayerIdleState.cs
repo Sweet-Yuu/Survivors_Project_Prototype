@@ -14,6 +14,13 @@ public class PlayerIdleState : PlayerGroundedState
     public override void Enter()
     {
         base.Enter();
+
+        player.Movement.Stop();
+
+        player.Anim.SetFloat("speed", 0f);
+
+        player.Anim.SetFloat("lastInputX", player.LastInput.x);
+        player.Anim.SetFloat("lastInputY", player.LastInput.y);
     }
 
     public override void Exit()
@@ -25,6 +32,8 @@ public class PlayerIdleState : PlayerGroundedState
     {
         base.LogicUpdate();
 
+        Vector2 input = player.InputHandler.movementInput;
+
         if (input != Vector2.zero)
         {
             stateMachine.ChangeState(player.MoveState);
@@ -34,6 +43,6 @@ public class PlayerIdleState : PlayerGroundedState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-        player.Move(Vector2.zero);
+        player.Movement.Stop();
     }
 }
