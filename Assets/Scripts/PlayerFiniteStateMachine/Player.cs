@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        LastInput = Vector2.down;
+        
         StateMachine.Initialize(IdleState);
     }
 
