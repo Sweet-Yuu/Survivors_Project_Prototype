@@ -33,7 +33,7 @@ public abstract class Enemy : MonoBehaviour
     {
         if (player != null)
         {
-            transform.localScale = new Vector3(player.transform.position.x < transform.position.x ? -1 : 1, 1, 1);
+            transform.localScale = new Vector2(player.transform.position.x < transform.position.x ? 1 : -1, transform.localScale.y);
         }
     }
     public virtual void TakeDamage(float damage)

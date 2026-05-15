@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class BasicEnemy : Enemy
 {
+    public PlayerHealth playerHealth;
+    public void Awake()
+    {
+        playerHealth = GetComponent<PlayerHealth>();
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            if (player != null)
+            if (playerHealth != null)
             {
-                player.TakeDamage(enterDamage);
+                playerHealth.TakeDamage(20);
             }
         }
     }
@@ -16,9 +21,9 @@ public class BasicEnemy : Enemy
     {
         if (collision.CompareTag("Player"))
         {
-            if (player != null)
+            if (playerHealth != null)
             {
-                player.TakeDamage(stayDamage);
+                playerHealth.TakeDamage(20);
             }
         }
     }
