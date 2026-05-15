@@ -3,28 +3,20 @@ using UnityEngine;
 public class BasicEnemy : Enemy
 {
     public PlayerHealth playerHealth;
-    public void Awake()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        playerHealth = GetComponent<PlayerHealth>();
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player"))
         {
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(20);
-            }
+            PlayerHealth playerHealth = collision.collider.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamage(20);
         }
     }
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.collider.CompareTag("Player"))
         {
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(20);
-            }
+            PlayerHealth playerHealth = collision.collider.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamage(20);
         }
     }
 }
