@@ -53,27 +53,32 @@ public class SettingManager : MonoBehaviour
         {
             mainMixer.SetFloat("MasterVol", -80f); // -80dB là im lặng hoàn toàn
             masterSlider.interactable = false;    // Khóa thanh gạt khi đang mute
+            musicSlider.interactable=false;
+            sfxSlider.interactable=false;
         }
         else
         {
             masterSlider.interactable = true;
+            musicSlider.interactable = true;
+            sfxSlider.interactable = true;
             SetMasterVolumn(masterSlider.value);  // Trả lại âm lượng cũ
+
         }
     }
 
     // Hàm để đóng/mở bảng cài đặt
-    public void ToggleSettingPanel(bool isActive)
-    {
-        gameObject.SetActive(isActive);
+    //public void ToggleSettingPanel(bool isActive)
+    //{
+    //    gameObject.SetActive(isActive);
 
-        // Nếu đang trong trận (ở màn 1 đến màn 11) thì tự động dừng game khi mở bảng
-        // Bạn có thể check điều kiện nếu đang ở Scene gameplay
-        /*
-        if (isActive) {
-            Time.timeScale = 0f; // Tạm dừng game
-        } else {
-            Time.timeScale = 1f; // Chạy tiếp
-        }
-        */
-    }
+    //    // Nếu đang trong trận (ở màn 1 đến màn 11) thì tự động dừng game khi mở bảng
+    //    // Bạn có thể check điều kiện nếu đang ở Scene gameplay
+    //    /*
+    //    if (isActive) {
+    //        Time.timeScale = 0f; // Tạm dừng game
+    //    } else {
+    //        Time.timeScale = 1f; // Chạy tiếp
+    //    }
+    //    */
+    //}
 }
