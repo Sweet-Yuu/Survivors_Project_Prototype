@@ -1437,9 +1437,9 @@ GameObject:
   - component: {fileID: 1130459016}
   - component: {fileID: 1130459015}
   - component: {fileID: 1130459014}
-  - component: {fileID: 1130459013}
   - component: {fileID: 1130459012}
   - component: {fileID: 1130459017}
+  - component: {fileID: 1130459018}
   m_Layer: 0
   m_Name: Skeleton-Sheet_0
   m_TagString: Untagged
@@ -1460,57 +1460,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BasicEnemy
   enemyMoveSpeed: 3
+  isFacingRightByDefault: 0
   maxHp: 50
   hpBar: {fileID: 0}
   enterDamage: 10
   stayDamage: 1
   playerHealth: {fileID: 695478134}
---- !u!61 &1130459013
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1130459011}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.84375, y: 0.9375}
-    newSize: {x: 0.84375, y: 0.9375}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.84375, y: 0.9375}
-  m_EdgeRadius: 0
 --- !u!50 &1130459014
 Rigidbody2D:
   serializedVersion: 5
@@ -1634,52 +1589,13 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!1 &1203303713
-GameObject:
+--- !u!70 &1130459018
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1203303718}
-  - component: {fileID: 1203303717}
-  - component: {fileID: 1203303716}
-  - component: {fileID: 1203303715}
-  - component: {fileID: 1203303714}
-  - component: {fileID: 1203303719}
-  m_Layer: 0
-  m_Name: Slime-Sheet_0
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1203303714
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203303713}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 757b5fa80235c3b429e3def9330896d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicEnemy
-  enemyMoveSpeed: 3
-  maxHp: 50
-  hpBar: {fileID: 0}
-  enterDamage: 10
-  stayDamage: 1
-  playerHealth: {fileID: 695478134}
---- !u!61 &1203303715
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1203303713}
+  m_GameObject: {fileID: 1130459011}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -1707,18 +1623,49 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8125, y: 0.59375}
-    newSize: {x: 0.8125, y: 0.59375}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.8125, y: 0.59375}
-  m_EdgeRadius: 0
+  m_Offset: {x: -0.028786302, y: -0.03117302}
+  m_Size: {x: 0.44152093, y: 0.8128081}
+  m_Direction: 0
+--- !u!1 &1203303713
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1203303718}
+  - component: {fileID: 1203303717}
+  - component: {fileID: 1203303716}
+  - component: {fileID: 1203303714}
+  - component: {fileID: 1203303719}
+  - component: {fileID: 1203303720}
+  m_Layer: 0
+  m_Name: Slime-Sheet_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1203303714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203303713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 757b5fa80235c3b429e3def9330896d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BasicEnemy
+  enemyMoveSpeed: 3
+  isFacingRightByDefault: 0
+  maxHp: 50
+  hpBar: {fileID: 0}
+  enterDamage: 10
+  stayDamage: 1
+  playerHealth: {fileID: 695478134}
 --- !u!50 &1203303716
 Rigidbody2D:
   serializedVersion: 5
@@ -1842,6 +1789,43 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!70 &1203303720
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1203303713}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.008852245, y: -0.007082075}
+  m_Size: {x: 0.6397458, y: 0.43259597}
+  m_Direction: 1
 --- !u!1 &1989832825
 GameObject:
   m_ObjectHideFlags: 0
