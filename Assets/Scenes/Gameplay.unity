@@ -512,7 +512,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &489678085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,7 +1130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   playerData: {fileID: 11400000, guid: a75e277bc5fe78f48b08fb42dd51f3b9, type: 2}
-  activeBow: {fileID: 0}
+  activeBow: {fileID: 1568658095}
 --- !u!114 &695478132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1168,7 +1168,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa85b70d28d2d8c40bf022d453859d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerHealth
-  bloodStainPrefab: {fileID: 0}
+  bloodStainPrefab: {fileID: 8195862005614405310, guid: 03d74546f6166a04c845b6f0a13eb1b1, type: 3}
   invincibilityDuration: 0.4
 --- !u!114 &695478135
 MonoBehaviour:
@@ -1738,8 +1738,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -1972272473
-  m_SortingLayer: 0
+  m_SortingLayerID: 932882259
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8346868185768375723, guid: 70eb6c1d2d30a6e41ba5f709f11c8902, type: 3}

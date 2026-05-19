@@ -5,7 +5,7 @@ public class PlayerHealth : MonoBehaviour,IDamageable
     private Player player;
     public Vector2 HitDirection { get; private set; }   
 
-    public int CurrentHealth { get; private set; }
+    public float CurrentHealth { get; private set; }
     public GameObject bloodStainPrefab;
 
     [Header("Invincibility Settings")]
@@ -40,8 +40,8 @@ public class PlayerHealth : MonoBehaviour,IDamageable
 
         hasSpawnedBloodInThisHit = false;
 
-        int damageInt = Mathf.RoundToInt(damage);
-        CurrentHealth -= damageInt;
+        
+        CurrentHealth -= damage;
 
         Debug.Log("Current HP: " + CurrentHealth);
 

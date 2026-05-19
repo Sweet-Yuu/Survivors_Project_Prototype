@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerData : ScriptableObject
 {
     [Header("Health Data")]
-    public int maxHealth = 100;
+    public float maxHealth = 100;
     [Header("Movement Data")]
     public float moveSpeed = 5f;
     
