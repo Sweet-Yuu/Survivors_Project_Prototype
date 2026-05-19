@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 3
   tags:
   - Damageable
+  tags:
+  - Enemy
+  - Explosion
   layers:
   - Default
   - TransparentFX
@@ -50,6 +53,12 @@ TagManager:
     locked: 0
   - name: Crosshair
     uniqueID: 3469984265
+    locked: 0
+  - name: Enemy
+    uniqueID: 4067313633
+    locked: 0
+  - name: Explosion
+    uniqueID: 3577588863
     locked: 0
   m_RenderingLayers:
   - Default
