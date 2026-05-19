@@ -5,7 +5,6 @@ TagManager:
   serializedVersion: 3
   tags:
   - Damageable
-  tags:
   - Enemy
   - Explosion
   layers:
@@ -59,6 +58,9 @@ TagManager:
     locked: 0
   - name: Explosion
     uniqueID: 3577588863
+    locked: 0
+  - name: UI
+    uniqueID: 3143729717
     locked: 0
   m_RenderingLayers:
   - Default
