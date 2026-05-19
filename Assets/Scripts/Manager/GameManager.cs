@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
     }
-
+    
     public void GameOver()
     {
         gameOverPanel.SetActive(true);
@@ -27,6 +27,8 @@ public class GameManager : MonoBehaviour
 
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
-   
+    private void Update()
+    {
+        //Cursor.visible = false;
+    }
 }
