@@ -30,6 +30,7 @@ public class BowActivityState : BowState
             float angle = Mathf.Atan2(mouserDir.y, mouserDir.x) * Mathf.Rad2Deg;
             bow.transform.rotation = Quaternion.Euler(0f, 0f, angle);
         }
+       
     }
 
     public override void PhysicsUpdate()
