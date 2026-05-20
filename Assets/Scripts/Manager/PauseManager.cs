@@ -9,16 +9,21 @@ public class PauseGameManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Player.Instance != null && Player.Instance.InputHandler != null)
         {
-            if (isPaused)
+            if (Player.Instance.InputHandler.settingInput)
             {
-                Resume();
+                if (isPaused)
+                {
+                    Resume();
+                }
+                else
+                {
+                    Pause();
+                }
+                Player.Instance.InputHandler.UseSettingInput();
             }
-            else
-            {
-                Pause();
-            }
+
         }
     }
 
