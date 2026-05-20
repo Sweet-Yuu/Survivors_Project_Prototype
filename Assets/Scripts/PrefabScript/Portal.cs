@@ -1,12 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
 public class Portal : MonoBehaviour
 {
-    [Header("Custom Scene")]
-    public string[] scenePool;
-    [Header("UI")]
+    [Header("Scene Settings")]
+    public string targetSceneName;
+
+    [Header("UI Settings")]
     public GameObject interactionUI;
-    
+
     private bool isPlayerInRange = false;
 
     private void Start()
@@ -16,15 +18,17 @@ public class Portal : MonoBehaviour
             interactionUI.SetActive(false);
         }
     }
+
     private void Update()
     {
         if (isPlayerInRange && Player.Instance.InputHandler.interactInput)
         {
             Player.Instance.InputHandler.UseInteractInput();
-            LoadRandomScene();
+            OpenConfirmationCanvas();
         }
     }
-    void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -35,7 +39,8 @@ public class Portal : MonoBehaviour
             }
         }
     }
-    void OnTriggerExit2D(Collider2D collision)
+
+    private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
@@ -44,18 +49,46 @@ public class Portal : MonoBehaviour
             {
                 interactionUI.SetActive(false);
             }
+
+            if (ConfirmationManager.Instance != null)
+            {
+                ConfirmationManager.Instance.OnCancelButtonPressed();
+            }
         }
     }
-    void LoadRandomScene()
+
+    private void OpenConfirmationCanvas()
     {
-        if (scenePool.Length == 0)
+        if (ConfirmationManager.Instance != null)
         {
-            Debug.LogWarning("Scene pool is empty. Please add scene names to the pool.");
+            ConfirmationManager.Instance.OpenConfirmation(this);
+            if (interactionUI != null)
+            {
+                interactionUI.SetActive(false);
+            }
+        }
+        else
+        {
+            ConfirmLoadScene();
+        }
+    }
+
+    public void ConfirmLoadScene()
+    {
+        if (string.IsNullOrEmpty(targetSceneName))
+        {
             return;
         }
-        int randomIndex = Random.Range(0, scenePool.Length);
-        string sceneName = scenePool[randomIndex];
-        SceneManager.LoadScene(sceneName);
+
+        Time.timeScale = 1f;
+        SceneManager.LoadScene(targetSceneName);
+    }
+
+    public void CancelLoadScene()
+    {
+        if (isPlayerInRange && interactionUI != null)
+        {
+            interactionUI.SetActive(true);
+        }
     }
 }
-

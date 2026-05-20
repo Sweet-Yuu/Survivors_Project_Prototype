@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -5,18 +6,16 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
+    [Header("Game Settings")]
     [SerializeField] public float score = 60;
-    public GameObject portalPrefab;
-    public Transform playerTransform;
     public GameObject gameOverPanel;
     public TextMeshProUGUI scoreText;
 
-    
-
+    [Header("Portal Settings")]
+    public List<GameObject> portalPrefab = new List<GameObject>();
     public bool isPortalSpawned = false;
-
-
-    
+    public Transform playerTransform;
 
     private void Awake()
     {
@@ -24,53 +23,102 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
-        //Cursor.visible = false;
     }
 
     public void GameOver()
     {
         gameOverPanel.SetActive(true);
-
         Time.timeScale = 0f;
     }
+
     public void RestartGame()
     {
         Time.timeScale = 1f;
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
+
     private void Update()
     {
+        if (Player.Instance != null && Player.Instance.Health.CurrentHealth <= 0)
+        {
+            GameOver();
+            return;
+        }
+
+        if (isPortalSpawned)
+        {
+            return;
+        }
+
         if (score > 0)
         {
             score -= Time.deltaTime;
             scoreText.text = Mathf.RoundToInt(score).ToString();
-        }
-        else if (!isPortalSpawned)
-        {
-            SpawnPortal();
-        }
-        else if (Player.Instance.Health.CurrentHealth<=0)
-        {
-            GameOver();
-        }
-    }
-    void SpawnPortal()
-    {
-        Camera mainCam = Camera.main;
-        isPortalSpawned = true;
-        
-        if(mainCam != null)
-        {
-            Vector3 randomViewportPos = new Vector3(Random.Range(0.2f, 0.8f),  Random.Range(0.2f, 0.8f),mainCam.nearClipPlane);
-            Vector3 spawnPos = mainCam.ViewportToWorldPoint(randomViewportPos);
-            spawnPos.z = 0; // Ensure the portal spawns at the correct depth
-            Instantiate(portalPrefab, spawnPos, Quaternion.identity);
-            Debug.Log($"Portal spawned at: {spawnPos}");
+
+            if (score <= 5)
+            {
+                scoreText.color = Color.red;
+            }
         }
         else
         {
+            scoreText.color = Color.red;
+            scoreText.text = "0";
+            OnTimeOut();
+        }
+    }
+
+    void OnTimeOut()
+    {
+        isPortalSpawned = true;
+        ClearAllEnemies();
+        SpawnPortals();
+    }
+
+    void ClearAllEnemies()
+    {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            enemy.SetActive(false);
+        }
+    }
+
+    void SpawnPortals()
+    {
+        Camera mainCam = Camera.main;
+        if (mainCam == null)
+        {
             Debug.LogError("Main Camera not found!");
+            return;
+        }
+
+        if (portalPrefab == null || portalPrefab.Count == 0)
+        {
+            Debug.LogError("No portal prefabs assigned!");
+            return;
+        }
+
+        List<GameObject> tempPortalList = new List<GameObject>(portalPrefab);
+
+        for (int i = 0; i < 2; i++)
+        {
+            if (tempPortalList.Count == 0)
+            {
+                break;
+            }
+
+            int randomIndex = Random.Range(0, tempPortalList.Count);
+            GameObject portalToSpawn = tempPortalList[randomIndex];
+
+            Vector3 randomViewportPos = new Vector3(Random.Range(0.2f, 0.8f), Random.Range(0.2f, 0.8f), mainCam.nearClipPlane);
+            Vector3 spawnPos = mainCam.ViewportToWorldPoint(randomViewportPos);
+            spawnPos.z = 0;
+
+            Instantiate(portalToSpawn, spawnPos, Quaternion.identity);
+            Debug.Log($"portal {i + 1} type [{portalToSpawn.name}] spawn at: {spawnPos}");
+
+            tempPortalList.RemoveAt(randomIndex);
         }
     }
 }

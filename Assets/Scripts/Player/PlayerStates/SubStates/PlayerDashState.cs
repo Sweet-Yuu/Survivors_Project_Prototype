@@ -22,10 +22,10 @@ public class PlayerDashState : PlayerGroundedState
         {
             player.Dash.dashDirection = player.LastInput.normalized;
         }
-        if(player.ActiveBow != null)
-        {
-            player.ActiveBow.HideWeapon();
-        }
+        //if(player.ActiveBow != null)
+        //{
+        //    player.ActiveBow.HideWeapon();
+        //}
 
         player.Anim.SetFloat("dashX", player.Dash.dashDirection.x);
         player.Anim.SetFloat("dashY", player.Dash.dashDirection.y);
@@ -36,10 +36,10 @@ public class PlayerDashState : PlayerGroundedState
     public override void Exit()
     {
         base.Exit();
-        if(player.ActiveBow != null)
-        {
-            player.ActiveBow.ShowWeapon();
-        }
+        //if(player.ActiveBow != null)
+        //{
+        //    player.ActiveBow.ShowWeapon();
+        //}
         player.RB.linearVelocity = Vector2.zero;
        
     }
@@ -47,7 +47,7 @@ public class PlayerDashState : PlayerGroundedState
     public override void LogicUpdate()
     {
         //base.LogicUpdate();
-        if (Time.time >= player.Dash.dashStartTime + player.Dash.dashDuration)
+        if (Time.time >= player.Dash.dashStartTime + Player.Instance.PlayerData.dashDuration)
         {
             
             if (input != Vector2.zero)
@@ -67,6 +67,6 @@ public class PlayerDashState : PlayerGroundedState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-        player.RB.linearVelocity = player.Dash.dashDirection * player.Dash.dashSpeed;
+        player.RB.linearVelocity = player.Dash.dashDirection * Player.Instance.PlayerData.dashSpeed;
     }
 }

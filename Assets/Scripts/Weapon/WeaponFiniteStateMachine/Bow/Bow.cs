@@ -63,12 +63,12 @@ public class Bow : MonoBehaviour
             AttackState.isAnimationFinished = true;
         }
     }
-    public void HideWeapon()
-    {
-        if (spriteRenderer != null) spriteRenderer.enabled = false;
-    }
-        public void ShowWeapon()
-        {
-            if (spriteRenderer != null) spriteRenderer.enabled = true;
-    }
+    //public void HideWeapon()
+    //{
+    //    if (spriteRenderer != null) spriteRenderer.enabled = false;
+    //}
+    //    public void ShowWeapon()
+    //    {
+    //        if (spriteRenderer != null) spriteRenderer.enabled = true;
+    //}
 }
