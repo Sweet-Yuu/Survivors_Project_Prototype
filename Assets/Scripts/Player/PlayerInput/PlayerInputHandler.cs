@@ -8,6 +8,7 @@ public class PlayerInputHandler : MonoBehaviour
     public Vector2 movementInput { get; private set; }
     public bool AttackInput { get; private set; }
     public bool dashInput { get; private set; }
+    public bool settingInput { get; private set; }
 
 
     private Camera cam;
@@ -40,6 +41,21 @@ public class PlayerInputHandler : MonoBehaviour
     public void OnDashInput(InputAction.CallbackContext context)
     {
         dashInput= context.ReadValueAsButton();
+    }
+
+    public void OnSettingInput(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            settingInput = true;
+        }
+       
+        
+    }
+
+    public void UseSettingInput()
+    {
+        settingInput = false;
     }
     public void UseDashInput()
     {
