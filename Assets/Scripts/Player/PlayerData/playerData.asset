@@ -14,3 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
   maxHealth: 100
   moveSpeed: 5
+  maxDef: 10
+  dashDuration: 0.4
+  dashSpeed: 20
+  dashCooldown: 1

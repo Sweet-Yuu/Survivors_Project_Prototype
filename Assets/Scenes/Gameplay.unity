@@ -1911,13 +1911,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172985d786ddd31428c630e947058e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  score: 10
+  score: 5
   gameOverPanel: {fileID: 489678084}
   scoreText: {fileID: 318938304}
   portalPrefab:
-  - {fileID: 5566985790521411586, guid: 6c4d3b64b5818b4499e3b957566f2af1, type: 3}
-  - {fileID: 7973172714189682652, guid: a9038f6d46711184598ff6a660d7be6d, type: 3}
-  - {fileID: 605881745582288149, guid: b5fdf8f53abeb02429382168c61260a8, type: 3}
+  - {fileID: 1689004885809143370, guid: 3e680ecb63590b641a1a8d3ffb3a62f1, type: 3}
+  - {fileID: 9208321127793468274, guid: ebda183bd0fb5bb44b03df58266b4903, type: 3}
   isPortalSpawned: 0
   playerTransform: {fileID: 695478128}
 --- !u!4 &1024096640
@@ -2671,14 +2670,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568658092}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: 0.011837747, w: -0.99992996}
-  m_LocalPosition: {x: 0, y: -0.32, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: 0.00904682, w: -0.9999591}
+  m_LocalPosition: {x: 0.034999847, y: -0.21600008, z: 0}
   m_LocalScale: {x: 0.8600303, y: 0.95496625, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2085075322}
   m_Father: {fileID: 1312188764}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -361.357}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -361.037}
 --- !u!212 &1568658094
 SpriteRenderer:
   serializedVersion: 2
@@ -2728,7 +2727,7 @@ SpriteRenderer:
   m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 5396860616485283100, guid: 2c8beaf82589324498f5a7f46ad74305, type: 3}
+  m_Sprite: {fileID: -8346868185768375723, guid: 70eb6c1d2d30a6e41ba5f709f11c8902, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
