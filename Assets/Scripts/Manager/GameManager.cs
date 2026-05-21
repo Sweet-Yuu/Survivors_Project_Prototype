@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        Cursor.visible = false;
     }
 
     public void GameOver()

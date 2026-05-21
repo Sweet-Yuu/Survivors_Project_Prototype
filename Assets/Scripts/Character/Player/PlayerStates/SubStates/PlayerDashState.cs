@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class PlayerDashState : PlayerGroundedState
 {
+    private int originalLayer;
     public PlayerDashState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -22,26 +23,23 @@ public class PlayerDashState : PlayerGroundedState
         {
             player.Dash.dashDirection = player.LastInput.normalized;
         }
-        //if(player.ActiveBow != null)
-        //{
-        //    player.ActiveBow.HideWeapon();
-        //}
+        
 
         player.Anim.SetFloat("dashX", player.Dash.dashDirection.x);
         player.Anim.SetFloat("dashY", player.Dash.dashDirection.y);
-        
 
+        player.IsInvincible(true);
+        originalLayer = player.gameObject.layer;
+        player.gameObject.layer = LayerMask.NameToLayer("DashLayer");
     }
 
     public override void Exit()
     {
         base.Exit();
-        //if(player.ActiveBow != null)
-        //{
-        //    player.ActiveBow.ShowWeapon();
-        //}
+        
         player.RB.linearVelocity = Vector2.zero;
-       
+        player.IsInvincible(false);
+        player.gameObject.layer = originalLayer;
     }
 
     public override void LogicUpdate()

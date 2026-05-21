@@ -9,7 +9,6 @@ public class EnemyData : ScriptableObject
     public float moveSpeed=5f;
     public float attackRange=5f;
     public float damage=10f;
-
-    [Header("Enemy States")]
-    public float stunDuration=0.5f;
+    
+    public GameObject experiencePrefab;
 }

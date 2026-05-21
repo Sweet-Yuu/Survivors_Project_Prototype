@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2ba26ed90f62f2545a624eda57ec7879, type: 3}
   m_Name: BowData
   m_EditorClassIdentifier: Assembly-CSharp::BowData
-  attackSpeed: 3
+  attackSpeed: 5
   attackDamage: 10
+  attackCrit: 5
+  attackCritDmg: 100

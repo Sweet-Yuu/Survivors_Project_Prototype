@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: 8ae921b011030524ca96996309f78f94
+guid: 5894314da81c3cc47981ce3d3e1b3cff
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6747310529568222710
-    second: run orc-Sheet_0
+      213: -1907593836475083212
+    second: Right Hurt MiniSkeleton-Sheet_0
   - first:
-      213: 3083044935859608765
-    second: run orc-Sheet_1
+      213: -1374101765234313538
+    second: Right Hurt MiniSkeleton-Sheet_1
   - first:
-      213: -7722792759395774413
-    second: run orc-Sheet_2
-  - first:
-      213: 201649529244857614
-    second: run orc-Sheet_3
-  - first:
-      213: 249965055593866403
-    second: run orc-Sheet_4
-  - first:
-      213: -8676115141874956016
-    second: run orc-Sheet_5
+      213: -4044943998397264733
+    second: Right Hurt MiniSkeleton-Sheet_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: run orc-Sheet_0
+      name: Right Hurt MiniSkeleton-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 70
-        height: 70
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6fdaa288d2343ad50800000000000000
-      internalID: 6747310529568222710
+      spriteID: 4369d29338dd685e0800000000000000
+      internalID: -1907593836475083212
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: run orc-Sheet_1
+      name: Right Hurt MiniSkeleton-Sheet_1
       rect:
         serializedVersion: 2
-        x: 70
+        x: 32
         y: 0
-        width: 70
-        height: 70
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dbc9a74d80d29ca20800000000000000
-      internalID: 3083044935859608765
+      spriteID: eb6b8fd89b53eece0800000000000000
+      internalID: -1374101765234313538
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: run orc-Sheet_2
+      name: Right Hurt MiniSkeleton-Sheet_2
       rect:
         serializedVersion: 2
-        x: 140
+        x: 64
         y: 0
-        width: 70
-        height: 70
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,74 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 330914607e023d490800000000000000
-      internalID: -7722792759395774413
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run orc-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 0
-        width: 70
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e05b3cfad276cc200800000000000000
-      internalID: 201649529244857614
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run orc-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 280
-        y: 0
-        width: 70
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3a4eee8c4ed087300800000000000000
-      internalID: 249965055593866403
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: run orc-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 0
-        width: 70
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 019c72a1f3f389780800000000000000
-      internalID: -8676115141874956016
+      spriteID: 3acce2f4dd87dd7c0800000000000000
+      internalID: -4044943998397264733
       vertices: []
       indices: 
       edges: []
@@ -250,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 1114a2b3944549c4b9c9025f66fc8914
+    spriteID: ad81f03bcd9503347983288695095ee4
     internalID: 0
     vertices: []
     indices: 
@@ -260,14 +185,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":70.0,"y":70.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      run orc-Sheet_0: 6747310529568222710
-      run orc-Sheet_1: 3083044935859608765
-      run orc-Sheet_2: -7722792759395774413
-      run orc-Sheet_3: 201649529244857614
-      run orc-Sheet_4: 249965055593866403
-      run orc-Sheet_5: -8676115141874956016
+      Right Hurt MiniSkeleton-Sheet_0: -1907593836475083212
+      Right Hurt MiniSkeleton-Sheet_1: -1374101765234313538
+      Right Hurt MiniSkeleton-Sheet_2: -4044943998397264733
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

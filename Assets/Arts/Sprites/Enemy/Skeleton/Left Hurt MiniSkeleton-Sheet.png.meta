@@ -1,25 +1,16 @@
 fileFormatVersion: 2
-guid: 1a430fdf8c0e0ac4e83f82f3501cef8c
+guid: 8e781797545b18745a60d7ff5a1f7005
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3378327196790635782
-    second: Left Die Orc-Sheet_0
+      213: 2414117963416715592
+    second: Left Hurt MiniSkeleton-Sheet_0
   - first:
-      213: 414483494710434707
-    second: Left Die Orc-Sheet_1
+      213: -5055273246609419118
+    second: Left Hurt MiniSkeleton-Sheet_1
   - first:
-      213: 2638067502569549688
-    second: Left Die Orc-Sheet_2
-  - first:
-      213: -7308219466220933160
-    second: Left Die Orc-Sheet_3
-  - first:
-      213: 7530331664631391513
-    second: Left Die Orc-Sheet_4
-  - first:
-      213: -6933835663486390375
-    second: Left Die Orc-Sheet_5
+      213: -4760173562240376821
+    second: Left Hurt MiniSkeleton-Sheet_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -115,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Left Die Orc-Sheet_0
+      name: Left Hurt MiniSkeleton-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 70
-        height: 70
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 60d3fb3bfaa32ee20800000000000000
-      internalID: 3378327196790635782
+      spriteID: 841c7574f7ba08120800000000000000
+      internalID: 2414117963416715592
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left Die Orc-Sheet_1
+      name: Left Hurt MiniSkeleton-Sheet_1
       rect:
         serializedVersion: 2
-        x: 70
+        x: 32
         y: 0
-        width: 70
-        height: 70
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 39b5a7bda8a80c500800000000000000
-      internalID: 414483494710434707
+      spriteID: 2945f4524cf08d9b0800000000000000
+      internalID: -5055273246609419118
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left Die Orc-Sheet_2
+      name: Left Hurt MiniSkeleton-Sheet_2
       rect:
         serializedVersion: 2
-        x: 140
+        x: 64
         y: 0
-        width: 70
-        height: 70
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -174,74 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 87fe820aa6c4c9420800000000000000
-      internalID: 2638067502569549688
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Left Die Orc-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 0
-        width: 70
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8df6e47bd1df39a90800000000000000
-      internalID: -7308219466220933160
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Left Die Orc-Sheet_4
-      rect:
-        serializedVersion: 2
-        x: 280
-        y: 0
-        width: 70
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 915ea3760cc118860800000000000000
-      internalID: 7530331664631391513
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Left Die Orc-Sheet_5
-      rect:
-        serializedVersion: 2
-        x: 350
-        y: 0
-        width: 70
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 99f65fa733116cf90800000000000000
-      internalID: -6933835663486390375
+      spriteID: b00e4799d5770fdb0800000000000000
+      internalID: -4760173562240376821
       vertices: []
       indices: 
       edges: []
@@ -250,7 +175,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 43e1758cf25941545a4d49c022c5d1a9
+    spriteID: 8a68c21faac58f54d869caf5f83cf661
     internalID: 0
     vertices: []
     indices: 
@@ -260,14 +185,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":70.0,"y":70.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Left Die Orc-Sheet_0: 3378327196790635782
-      Left Die Orc-Sheet_1: 414483494710434707
-      Left Die Orc-Sheet_2: 2638067502569549688
-      Left Die Orc-Sheet_3: -7308219466220933160
-      Left Die Orc-Sheet_4: 7530331664631391513
-      Left Die Orc-Sheet_5: -6933835663486390375
+      Left Hurt MiniSkeleton-Sheet_0: 2414117963416715592
+      Left Hurt MiniSkeleton-Sheet_1: -5055273246609419118
+      Left Hurt MiniSkeleton-Sheet_2: -4760173562240376821
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

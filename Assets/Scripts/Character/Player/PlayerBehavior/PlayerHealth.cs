@@ -3,18 +3,15 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour,IDamageable
 {
     private Player player;
-    public Vector2 HitDirection { get; private set; }   
-
+    public Vector2 HitDirection { get; private set; }
     public float CurrentHealth { get; private set; }
     public GameObject bloodStainPrefab;
 
-    [Header("Invincibility Settings")]
-    [SerializeField] private float invincibilityDuration = 0.4f;
-    private float lastImmortalTime = -999f;
+    
 
     private bool hasSpawnedBloodInThisHit = false;
 
-    public bool IsInvincible => Time.time < lastImmortalTime + invincibilityDuration;
+    
 
     private void Awake()
     {
@@ -31,12 +28,11 @@ public class PlayerHealth : MonoBehaviour,IDamageable
             Debug.Log("Dodge");
             return;
         }
-        if (IsInvincible)
+        if (Player.Instance.isInvincible)
         {
-            Debug.Log("Immortal");
             return;
         }
-        lastImmortalTime = Time.time;
+        
 
         hasSpawnedBloodInThisHit = false;
 

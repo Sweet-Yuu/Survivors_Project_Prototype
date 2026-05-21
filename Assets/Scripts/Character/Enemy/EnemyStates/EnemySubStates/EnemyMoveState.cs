@@ -38,7 +38,6 @@ public class EnemyMoveState : EnemyActivityState
         base.LogicUpdate();
         if (playerTransform == null)
         {
-            // stateMachine.ChangeState(enemy.IdleState);
             return;
         }
         

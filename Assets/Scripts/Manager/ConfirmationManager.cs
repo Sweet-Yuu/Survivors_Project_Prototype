@@ -16,6 +16,7 @@ public class ConfirmationManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        Cursor.visible = true;
     }
 
     private void Start()

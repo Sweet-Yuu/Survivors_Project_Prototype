@@ -11,11 +11,11 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
-  - 
-  - 
+  - DashLayer
+  - Player
   - 
   - 
   - 
@@ -47,11 +47,11 @@ TagManager:
   - name: Portal
     uniqueID: 1219468417
     locked: 0
-  - name: Player
-    uniqueID: 4132427129
-    locked: 0
   - name: Enemies
     uniqueID: 335759169
+    locked: 0
+  - name: Player
+    uniqueID: 4132427129
     locked: 0
   - name: Weapon
     uniqueID: 932882259
@@ -64,6 +64,9 @@ TagManager:
     locked: 0
   - name: UI
     uniqueID: 3143729717
+    locked: 0
+  - name: DashLayer
+    uniqueID: 2496565119
     locked: 0
   m_RenderingLayers:
   - Default

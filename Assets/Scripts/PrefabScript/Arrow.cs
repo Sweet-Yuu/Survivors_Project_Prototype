@@ -4,35 +4,35 @@ public class Arrow : MonoBehaviour
 {
     [SerializeField] private float lifetime = 5f;
     private Rigidbody2D rb;
-    private Bow bow; // Reference to the enemy that shot the arrow
+    private Bow bow;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-            bow = GetComponentInParent<Bow>(); // Assuming the arrow is a child of the enemy that shot it
-
+        bow = GetComponentInParent<Bow>();
     }
+
     private void Start()
     {
         Destroy(gameObject, lifetime);
     }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-       
-        Enemy enemy = collision.GetComponent<Enemy>();
-
-        
         if (collision.CompareTag("Enemy"))
         {
             
-            enemy.TakeDamage(bow.BowData.attackDamage);
-            Destroy(gameObject);
-        }
-      
-        else if (collision.CompareTag("Wall") || collision.CompareTag("Ground"))
-        {
+            EnemyHealth enemyHealth = collision.GetComponentInParent<EnemyHealth>();
+
+            if (enemyHealth != null)
+            {
+                float damage = (bow != null && bow.BowData != null) ? bow.BowData.attackDamage : 10f;
+
+               
+                enemyHealth.TakeDamage(damage, transform.position);
+            }
+
             Destroy(gameObject);
         }
     }
-
 }

@@ -17,3 +17,4 @@ MonoBehaviour:
   moveSpeed: 3
   attackRange: 5
   damage: 10
+  experiencePrefab: {fileID: 7903996712176553750, guid: dc1b5c6673a75cc4db914bdd50d18a84, type: 3}
