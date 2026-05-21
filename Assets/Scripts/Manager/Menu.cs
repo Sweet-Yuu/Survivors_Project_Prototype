@@ -10,10 +10,12 @@ public class Menu : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("Gameplay");
+        //SceneManager.LoadScene("Gameplay")
+        SceneManager.LoadScene("Loc");
+
     }
 
-    
+
     public void QuitGame()
     {
         Application.Quit();

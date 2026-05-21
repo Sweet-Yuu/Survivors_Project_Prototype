@@ -1,8 +1,16 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class ResourceManager : MonoBehaviour
 {
     public static ResourceManager Instance { get; private set; }
+
+    [Header("UI References")]
+    public Slider expBar;
+    public TextMeshProUGUI levelText;
+    public GameObject levelUpPanel;
+    public CardManager cardManager;
 
     [Header("Level")]
     public int currentLevel = 1;
@@ -28,21 +36,63 @@ public class ResourceManager : MonoBehaviour
             
         }
     }
+    private void Start()
+    {
+        UpdateUI();
+        if(levelUpPanel !=null) levelUpPanel.SetActive(false);
+    }
     
 
     public void AddExp(int amount)
     {
         currentExp += amount;
         CheckLevelUp();
+        UpdateUI(); // Cập nhật lại expBar mỗi khi nhận exp
     }
 
     private void CheckLevelUp()
     {
-        while (currentLevel >= expToNextLevel)
+        while (currentExp >= expToNextLevel)
         {
             currentExp -= expToNextLevel;
             currentLevel++;
             expToNextLevel += 50;    //Tăng độ khó cho từng màn
+            TriggerLevelUpEvent();
+        }
+    }
+
+    private void TriggerLevelUpEvent()
+    {
+        // Dừng thời gian game
+        Time.timeScale = 0;
+
+        if (levelUpPanel != null) levelUpPanel.SetActive(true);
+
+        if (cardManager != null) cardManager.StartLevelUpSelection();
+
+    }
+
+    public void ResumeGame()
+    {
+        //Hàm này sẽ được gọi sau khi người chơi chọn xong bài
+        Time.timeScale = 1f;
+        if (levelUpPanel != null) levelUpPanel.SetActive(false);
+        CheckLevelUp();
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        if (expBar != null)
+        {
+            expBar.maxValue=expToNextLevel;
+            expBar.value = currentExp;
+
+        }
+
+        if (levelText != null)
+        {
+            levelText.text = "LV : " +currentLevel;
         }
     }
 

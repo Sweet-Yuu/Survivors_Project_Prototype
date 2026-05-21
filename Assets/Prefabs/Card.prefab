@@ -198,7 +198,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: hee
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 21edf7498a6a36946ac1a9d8d933e274, type: 2}
   m_sharedMaterial: {fileID: -1443176570697037278, guid: 21edf7498a6a36946ac1a9d8d933e274, type: 2}
@@ -562,5 +562,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f02db4d146f0caf40b963f1ea738d0fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Card
-  cardImageRenderer: {fileID: 5818681554544696158}
-  cardTextRenderer: {fileID: 5203927995454774348}
+  cardImageRenderer: {fileID: 0}
+  cardTextRenderer: {fileID: 0}
