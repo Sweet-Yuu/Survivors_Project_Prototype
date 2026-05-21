@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class CardManager : MonoBehaviour
@@ -58,7 +58,24 @@ public class CardManager : MonoBehaviour
     {
         GameObject cardGo= Instantiate(cardPrefab, position);
         Card card = cardGo.GetComponent<Card>();
-        card.Setup(cardSO);
+        card.Setup(cardSO, this);
         return cardGo;
+    }
+
+    public void OnCardSelected(CardSO selectedCard)
+    {
+        if (!alreadySelectedCards.Contains(selectedCard))
+        {
+            alreadySelectedCards.Add(selectedCard);
+        }
+        if (cardOne != null) Destroy(cardOne);
+        if (cardTwo != null) Destroy(cardTwo);
+        if (cardThree != null) Destroy(cardThree);
+
+        if(cardSelectionUI !=null)
+        {
+            cardSelectionUI.SetActive(false);
+        }
+        Debug.Log("Đã chọn thẻ: " + selectedCard.cardText + " | 3 thẻ bài đã biến mất.");
     }
 }
