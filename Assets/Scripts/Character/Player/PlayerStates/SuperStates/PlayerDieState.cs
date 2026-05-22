@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerDieState : PlayerState
 {
+    
     public PlayerDieState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
     }
@@ -19,17 +20,23 @@ public class PlayerDieState : PlayerState
         player.Movement.Stop();
 
         player.Anim.SetTrigger("die");
-
+        
+        Enemy.Instance.RB.linearVelocity = Vector2.zero;
         player.InputHandler.enabled = false;
+        if (player.bow != null)
+        {
+            player.bow.GetComponent<SpriteRenderer>().enabled = false;
+        }
+
 
         player.StartCoroutine(ShowGameOver());
     }
 
     private IEnumerator ShowGameOver()
     {
-        yield return new WaitForSeconds(2.017f);
+        yield return new WaitForSeconds(3.017f);
 
-        GameManager.Instance.GameOver();
+        GameOverManager.Instance.GameOver();
     }
 
     public override void Exit()

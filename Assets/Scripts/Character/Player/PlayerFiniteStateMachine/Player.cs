@@ -24,12 +24,13 @@ public class Player : MonoBehaviour
     public bool isInvincible { get; set; }
 
     public static Player Instance { get; private set; }
+    public Bow bow;
 
 
     [SerializeField] private PlayerData playerData;
     public PlayerData PlayerData => playerData;
     [SerializeField] private Bow activeBow;
-    public Bow ActiveBow => activeBow;
+    
 
     private void Awake()
     {

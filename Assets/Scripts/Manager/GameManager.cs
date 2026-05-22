@@ -7,9 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
-    [Header("Game Settings")]
+    [Header("Time Score Settings")]
     [SerializeField] public float score = 60;
-    public GameObject gameOverPanel;
     public TextMeshProUGUI scoreText;
 
     [Header("Portal Settings")]
@@ -23,28 +22,13 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
-        Cursor.visible = false;
+        
     }
 
-    public void GameOver()
-    {
-        gameOverPanel.SetActive(true);
-        Time.timeScale = 0f;
-    }
-
-    public void RestartGame()
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+    
 
     private void Update()
     {
-        if (Player.Instance != null && Player.Instance.Health.CurrentHealth <= 0)
-        {
-            GameOver();
-            return;
-        }
 
         if (isPortalSpawned)
         {

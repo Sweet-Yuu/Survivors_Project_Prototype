@@ -16,6 +16,7 @@ public abstract class Enemy : MonoBehaviour
     public Rigidbody2D RB { get; private set; }
 
 
+    public static Enemy Instance { get; private set; }
     [SerializeField] private EnemyData enemyData;
     public EnemyData EnemyData => enemyData;
 
@@ -23,6 +24,7 @@ public abstract class Enemy : MonoBehaviour
 
     protected virtual void Awake()
     {
+        Instance = this;
         Visual = GetComponentInChildren<EnemyVisual>();
         RB = GetComponent<Rigidbody2D>();
 
