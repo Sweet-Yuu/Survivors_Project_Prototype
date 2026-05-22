@@ -7,7 +7,11 @@ public class PlayerData : ScriptableObject
     public int maxHealth = 100;
     [Header("Movement Data")]
     public float moveSpeed = 5f;
-    
-   
+
+    public float dashSpeed;
+
+    public float dashDuration;
+
+
 
 }
