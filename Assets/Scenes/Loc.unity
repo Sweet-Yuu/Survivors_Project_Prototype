@@ -1202,7 +1202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &406487300
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4130,6 +4130,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d06bdccf0543b240b7d6f629f083bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResourceManager
+  levelUPVFXPrefab: {fileID: 6722605283350047416, guid: c3f8b6bf61de5b04cb806c430e8d3387, type: 3}
+  playerTransform: {fileID: 1039174015}
   expBar: {fileID: 2040686033}
   levelText: {fileID: 106286874}
   levelUpPanel: {fileID: 406487299}

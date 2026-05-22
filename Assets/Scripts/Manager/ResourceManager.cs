@@ -6,6 +6,10 @@ public class ResourceManager : MonoBehaviour
 {
     public static ResourceManager Instance { get; private set; }
 
+    [Header("VFX && Player")]
+    public GameObject levelUPVFXPrefab;
+    public Transform playerTransform;
+
     [Header("UI References")]
     public Slider expBar;
     public TextMeshProUGUI levelText;
@@ -63,6 +67,10 @@ public class ResourceManager : MonoBehaviour
 
     private void TriggerLevelUpEvent()
     {
+        if (levelUPVFXPrefab != null && playerTransform != null)
+        {
+            Instantiate(levelUPVFXPrefab, playerTransform.position, Quaternion.identity);
+        }
         // Dừng thời gian game
         Time.timeScale = 0;
 
