@@ -50,20 +50,18 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Infomation",
+                    "type": "Button",
+                    "id": "24baa47a-ac93-4341-9ca7-bc8407dae135",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "ade0308c-ae40-4097-bd3f-8d85bc14e892",
-                    "path": "<Gamepad>/leftStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
-                    "action": "Movement",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "WASD",
                     "id": "5f657630-6897-4ce6-be7b-945f8fdf1bc7",
@@ -176,11 +174,11 @@
                 },
                 {
                     "name": "",
-                    "id": "fabdc688-3bc9-4851-801d-bf52d4099756",
-                    "path": "<Joystick>/stick",
+                    "id": "ade0308c-ae40-4097-bd3f-8d85bc14e892",
+                    "path": "<Gamepad>/leftStick",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";Mobile",
+                    "groups": ";Gamepad",
                     "action": "Movement",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -192,17 +190,6 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard;Keyboard+Mouse",
-                    "action": "Direction",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "3a0332d6-f8d2-4b20-815e-ba0e33d36bb8",
-                    "path": "<Gamepad>/rightStick",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Gamepad",
                     "action": "Direction",
                     "isComposite": false,
                     "isPartOfComposite": false
@@ -221,7 +208,7 @@
                 {
                     "name": "",
                     "id": "a8b15d29-f2a8-4af9-9083-f45cd83e2a44",
-                    "path": "<Gamepad>/buttonWest",
+                    "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -242,19 +229,8 @@
                 },
                 {
                     "name": "",
-                    "id": "cafae0e1-cb45-4d4c-8f5e-d3caf6f3ac4b",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard+Mouse",
-                    "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "f926e97c-6102-4739-8846-93669dcc8cb0",
-                    "path": "<Gamepad>/rightTrigger",
+                    "path": "<Gamepad>/leftTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Gamepad",
@@ -270,6 +246,28 @@
                     "processors": "",
                     "groups": ";Keyboard+Mouse",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "80e6121d-5498-4fdb-aade-16b81da8c907",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "72c7f695-83dd-44ba-aa95-d666f0fe4ef8",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard+Mouse",
+                    "action": "Infomation",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

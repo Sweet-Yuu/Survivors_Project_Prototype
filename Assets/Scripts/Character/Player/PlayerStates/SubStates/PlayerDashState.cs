@@ -31,6 +31,8 @@ public class PlayerDashState : PlayerGroundedState
         player.IsInvincible(true);
         originalLayer = player.gameObject.layer;
         player.gameObject.layer = LayerMask.NameToLayer("DashLayer");
+
+        player.Dash.TriggerDashEvent();
     }
 
     public override void Exit()

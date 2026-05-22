@@ -16,19 +16,20 @@ public class PlayerDieState : PlayerState
     public override void Enter()
     {
         base.Enter();
+        Player.IsDead = true;
 
         player.Movement.Stop();
 
         player.Anim.SetTrigger("die");
+
         
-        Enemy.Instance.RB.linearVelocity = Vector2.zero;
         player.InputHandler.enabled = false;
         if (player.bow != null)
         {
             player.bow.GetComponent<SpriteRenderer>().enabled = false;
         }
 
-
+        GameManager.Instance.ClearAllEnemies();
         player.StartCoroutine(ShowGameOver());
     }
 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class PlayerHealth : MonoBehaviour,IDamageable
 {
@@ -7,7 +8,7 @@ public class PlayerHealth : MonoBehaviour,IDamageable
     public float CurrentHealth { get; private set; }
     public GameObject bloodStainPrefab;
 
-    
+    public event Action OnHealthChanged;
 
     private bool hasSpawnedBloodInThisHit = false;
 
@@ -38,8 +39,9 @@ public class PlayerHealth : MonoBehaviour,IDamageable
 
         
         CurrentHealth -= damage;
+       
+        OnHealthChanged?.Invoke();
 
-        Debug.Log("Current HP: " + CurrentHealth);
 
         HitDirection = -player.InputHandler.MouseDirection.normalized;
         //if (bloodStainPrefab != null) { SpawnBloodStain(); }
@@ -62,7 +64,7 @@ public class PlayerHealth : MonoBehaviour,IDamageable
             hasSpawnedBloodInThisHit = true;
 
             GameObject bloodStain = Instantiate(bloodStainPrefab, transform.position, Quaternion.identity);
-            float randomRotation = Random.Range(0f, 360f);
+            float randomRotation = UnityEngine.Random.Range(0f, 360f);
             bloodStain.transform.rotation = Quaternion.Euler(0f, 0f, randomRotation);
         }
     }

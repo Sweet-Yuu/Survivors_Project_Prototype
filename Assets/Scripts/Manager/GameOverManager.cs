@@ -45,7 +45,8 @@ public class GameOverManager : MonoBehaviour
         Time.timeScale = 0f; // Pause the game
     }
     public void RestartGame()
-    {       
+    {
+        Player.IsDead = false;
         StartCoroutine(FadeOutAndRestart());
     }
     private IEnumerator FadeOutAndRestart()

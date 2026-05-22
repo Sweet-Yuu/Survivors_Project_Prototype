@@ -4,20 +4,29 @@ using UnityEngine.InputSystem;
 public class MouseCrosshair : MonoBehaviour
 {
     private Camera mainCam;
+    private SpriteRenderer sr;
+
     private void Awake()
     {
         mainCam = Camera.main;
+        sr = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
     {
-        Vector2 mousePos =
-            Mouse.current.position.ReadValue();
+       
+        bool isUsingGamepad = Gamepad.current != null &&
+                             (Gamepad.current.rightStick.ReadValue().sqrMagnitude > 0.1f ||
+                              Gamepad.current.leftStick.ReadValue().sqrMagnitude > 0.1f);
 
-        Vector3 worldPos =
-            mainCam.ScreenToWorldPoint(mousePos);
+        sr.enabled = !isUsingGamepad;
 
-        worldPos.z = 0f;
-        transform.position = worldPos;
+        if (sr.enabled)
+        {
+            Vector2 mousePos = Mouse.current.position.ReadValue();
+            Vector3 worldPos = mainCam.ScreenToWorldPoint(mousePos);
+            worldPos.z = 0f;
+            transform.position = worldPos;
+        }
     }
 }

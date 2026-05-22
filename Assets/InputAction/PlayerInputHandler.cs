@@ -6,9 +6,11 @@ public class PlayerInputHandler : MonoBehaviour
     public Vector2 mouseScreenPosition;
     public Vector2 MouseDirection { get; private set; }
     public Vector2 movementInput { get; private set; }
+   
     public bool AttackInput { get; private set; }
     public bool dashInput { get; private set; }
     public bool interactInput { get; private set; }
+    public bool informationInput { get; private set; }
 
 
     private Camera cam;
@@ -22,7 +24,7 @@ public class PlayerInputHandler : MonoBehaviour
 
     private void Update()
     {
-        UpdateMouseDirection();
+            UpdateMouseDirection();
     }
 
     public void OnMovementInput(InputAction.CallbackContext context)
@@ -34,25 +36,38 @@ public class PlayerInputHandler : MonoBehaviour
     {
         mouseScreenPosition = context.ReadValue<Vector2>();
     }
+   
     public void OnAttackInput(InputAction.CallbackContext context)
     {
-       AttackInput = context.ReadValueAsButton();
+        AttackInput = context.ReadValueAsButton();
     }
     public void OnDashInput(InputAction.CallbackContext context)
     {
-        dashInput= context.ReadValueAsButton();
+        dashInput = context.ReadValueAsButton();
     }
     public void OnInteractInput(InputAction.CallbackContext context)
     {
-        if (context.started||context.performed)
+        if (context.started || context.performed)
         {
             interactInput = true;
         }
         else if (context.canceled)
-            {
-                interactInput = false;
+        {
+            interactInput = false;
         }
     }
+    public void OnInformationInput(InputAction.CallbackContext context)
+    {
+        if (context.started || context.performed)
+        {
+            informationInput = true;
+        }
+        else if (context.canceled)
+        {
+            informationInput = false;
+        }
+    }
+
     public void UseDashInput()
     {
         dashInput = false;
@@ -62,15 +77,21 @@ public class PlayerInputHandler : MonoBehaviour
         interactInput = false;
     }
 
-    private void UpdateMouseDirection()
+    private bool UpdateMouseDirection()
     {
-        Vector3 mouseWorldPos =
-            cam.ScreenToWorldPoint(mouseScreenPosition);
+        
+        
+            Debug.Log("Mouse Screen Position: " + mouseScreenPosition);
+            Vector3 mouseWorldPos =
+                            cam.ScreenToWorldPoint(mouseScreenPosition);
 
-        mouseWorldPos.z = 0f;
+            mouseWorldPos.z = 0f;
 
-        MouseDirection =
-            (mouseWorldPos - playerTransform.position).normalized;
+            MouseDirection =
+                (mouseWorldPos - playerTransform.position).normalized;
+            return true;
+        
     }
-    
+
+
 }

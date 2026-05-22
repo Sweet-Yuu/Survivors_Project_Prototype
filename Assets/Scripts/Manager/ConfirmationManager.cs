@@ -38,6 +38,7 @@ public class ConfirmationManager : MonoBehaviour
 
     public void OnConfirmButtonPressed()
     {
+        Player.Instance.IsInvincible(false);
         if (currentActivePortal != null)
         {
             currentActivePortal.ConfirmLoadScene();

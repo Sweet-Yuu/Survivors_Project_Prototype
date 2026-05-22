@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     public bool isPortalSpawned = false;
     public Transform playerTransform;
 
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -34,9 +36,14 @@ public class GameManager : MonoBehaviour
         {
             return;
         }
+        if (Player.IsDead)
+        {
+            return;
+        }
 
         if (score > 0)
         {
+            
             score -= Time.deltaTime;
             scoreText.text = Mathf.RoundToInt(score).ToString();
 
@@ -51,16 +58,20 @@ public class GameManager : MonoBehaviour
             scoreText.text = "0";
             OnTimeOut();
         }
+        
+        
     }
+    
 
     void OnTimeOut()
     {
+        Player.Instance.IsInvincible(true);
         isPortalSpawned = true;
         ClearAllEnemies();
         SpawnPortals();
     }
 
-    void ClearAllEnemies()
+    public void ClearAllEnemies()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)

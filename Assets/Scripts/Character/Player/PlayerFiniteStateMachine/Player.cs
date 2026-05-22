@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
     public Rigidbody2D RB { get; private set; }
     public Vector2 LastInput { get; set; }
     public bool isInvincible { get; set; }
+    public static bool IsDead = false;
 
     public static Player Instance { get; private set; }
     public Bow bow;
