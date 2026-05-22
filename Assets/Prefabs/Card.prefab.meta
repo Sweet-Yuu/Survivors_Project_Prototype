@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Prefabs/Card.prefab.meta
 guid: 403bf7576ead11e4e8f9146e30387175
+========
+guid: dc1b5c6673a75cc4db914bdd50d18a84
+>>>>>>>> origin/Vux/HotFix+UpdateSystemUI:Assets/Prefabs/orb exp.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 
