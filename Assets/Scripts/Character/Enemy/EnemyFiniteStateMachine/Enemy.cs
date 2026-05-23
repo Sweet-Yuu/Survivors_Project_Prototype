@@ -20,7 +20,8 @@ public abstract class Enemy : MonoBehaviour
     [SerializeField] private EnemyData enemyData;
     public EnemyData EnemyData => enemyData;
 
-   
+    public float despawnDistance = 20f;
+    Transform player;
 
     protected virtual void Awake()
     {
@@ -38,11 +39,16 @@ public abstract class Enemy : MonoBehaviour
     }
     protected virtual void Start()
     {
+        player = FindFirstObjectByType<Player>().transform;
         StateMachine.Initialize(MoveState);
     }
 
     private void Update()
     {
+        if (Vector2.Distance(transform.position,player.position)>=despawnDistance)
+        {
+            ReturnEnemy();
+        }
         StateMachine.CurrentState.LogicUpdate();
     }
 
@@ -51,5 +57,18 @@ public abstract class Enemy : MonoBehaviour
         StateMachine.CurrentState.PhysicsUpdate();
     }
 
-    
+
+    private void OnDestroy()
+    {
+        if (EnemySpawner.Instance != null)
+        {
+            EnemySpawner.Instance.OnEnemyKilled();
+        }
+    }
+
+    void ReturnEnemy()
+    {
+        EnemySpawner es = FindFirstObjectByType<EnemySpawner>();
+        transform.position = player.position + es.relativeSpawnPoint[Random.Range(0,es.relativeSpawnPoint.Count)].position;
+    }
 }
