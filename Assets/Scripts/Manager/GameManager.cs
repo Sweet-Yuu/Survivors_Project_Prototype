@@ -16,8 +16,6 @@ public class GameManager : MonoBehaviour
     public bool isPortalSpawned = false;
     public Transform playerTransform;
 
-
-
     private void Awake()
     {
         if (Instance == null)
@@ -26,8 +24,11 @@ public class GameManager : MonoBehaviour
         }
         
     }
-
-    
+    private void Start()
+    {
+        //Cursor.visible = false;
+        //Cursor.lockState = CursorLockMode.Confined;
+    }
 
     private void Update()
     {
