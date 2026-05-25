@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d39c7921a597ad40a325f9129aa926c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Skeleton
-  enemyData: {fileID: 11400000, guid: 20fc752b14ce71548bfd66f1d7c6880a, type: 2}
+  enemyData: {fileID: 11400000, guid: e5248e7a79150414aa149205aa6514d6, type: 2}
   despawnDistance: 30
 --- !u!114 &5933105179592638214
 MonoBehaviour:

@@ -81,7 +81,7 @@ public class PlayerInputHandler : MonoBehaviour
     {
         
         
-            
+            Debug.Log("Mouse Screen Position: " + mouseScreenPosition);
             Vector3 mouseWorldPos =
                             cam.ScreenToWorldPoint(mouseScreenPosition);
 

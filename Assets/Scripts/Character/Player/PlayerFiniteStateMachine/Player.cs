@@ -5,7 +5,6 @@ public class Player : MonoBehaviour
     public PlayerMovement Movement { get; private set; }
     public PlayerHealth Health { get; private set; }
     public PlayerDash Dash { get; private set; }
-    public PlayerExperience Experience { get; private set; }
    
 
 
@@ -31,7 +30,6 @@ public class Player : MonoBehaviour
 
     [SerializeField] private PlayerData playerData;
     public PlayerData PlayerData => playerData;
-
     [SerializeField] private Bow activeBow;
     
 
@@ -47,7 +45,6 @@ public class Player : MonoBehaviour
         Movement = GetComponent<PlayerMovement>();
         Health = GetComponent<PlayerHealth>();
         Dash = GetComponent<PlayerDash>();
-        Experience = GetComponent<PlayerExperience>();
 
         StateMachine = new PlayerStateMachine();
 
@@ -57,7 +54,7 @@ public class Player : MonoBehaviour
         DieState = new PlayerDieState(this, StateMachine, playerData, "die");
         DashState = new PlayerDashState(this, StateMachine, playerData, "dash");
 
-        
+
     }
 
     private void Start()

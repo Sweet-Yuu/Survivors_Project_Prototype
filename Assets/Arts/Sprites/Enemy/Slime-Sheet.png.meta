@@ -1,28 +1,37 @@
 fileFormatVersion: 2
-guid: 8dd5340542f8d494e8f46c1252db8e36
+guid: 7a6dc4c965d0fa54ea9adc23d5ac606f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6203835159582393512
-    second: Left Attack Mini Skeleton-Sheet_0
+      213: 7970909259963184619
+    second: Slime-Sheet_0
   - first:
-      213: 1209651020899897404
-    second: Left Attack Mini Skeleton-Sheet_1
+      213: 364558614396161899
+    second: Slime-Sheet_1
   - first:
-      213: -5934172861459417947
-    second: Left Attack Mini Skeleton-Sheet_2
+      213: 5765889574378607175
+    second: Slime-Sheet_2
   - first:
-      213: -3314045111835143776
-    second: Left Attack Mini Skeleton-Sheet_3
+      213: 1934026264422326969
+    second: Slime-Sheet_3
   - first:
-      213: -799121334287663797
-    second: Left Attack Mini Skeleton-Sheet_4
+      213: -3448268118887821929
+    second: Slime-Sheet_4
   - first:
-      213: -6689002353342695134
-    second: Left Attack Mini Skeleton-Sheet_5
+      213: -1814283235909507114
+    second: Slime-Sheet_5
   - first:
-      213: -1352980522956341862
-    second: Left Attack Mini Skeleton-Sheet_6
+      213: -7106344829748609378
+    second: Slime-Sheet_6
+  - first:
+      213: -2498532192715216201
+    second: Slime-Sheet_7
+  - first:
+      213: 5488710179900461066
+    second: Slime-Sheet_8
+  - first:
+      213: -5577733033203192419
+    second: Slime-Sheet_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -118,13 +127,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Left Attack Mini Skeleton-Sheet_0
+      name: Slime-Sheet_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 8
-        width: 27
-        height: 42
+        x: 4
+        y: 6
+        width: 26
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +142,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85b330caacc87e9a0800000000000000
-      internalID: -6203835159582393512
+      spriteID: be53af08dbb5e9e60800000000000000
+      internalID: 7970909259963184619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left Attack Mini Skeleton-Sheet_1
+      name: Slime-Sheet_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 8
-        width: 27
-        height: 41
+        x: 36
+        y: 6
+        width: 26
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c305deac13b89c010800000000000000
-      internalID: 1209651020899897404
+      spriteID: b6f44e6d02c2f0500800000000000000
+      internalID: 364558614396161899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left Attack Mini Skeleton-Sheet_2
+      name: Slime-Sheet_2
       rect:
         serializedVersion: 2
-        x: 111
-        y: 8
-        width: 31
-        height: 42
+        x: 68
+        y: 6
+        width: 26
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +186,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5a4b2fc193595ada0800000000000000
-      internalID: -5934172861459417947
+      spriteID: 74217f6d40e840050800000000000000
+      internalID: 5765889574378607175
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left Attack Mini Skeleton-Sheet_3
+      name: Slime-Sheet_3
       rect:
         serializedVersion: 2
-        x: 151
-        y: 8
-        width: 39
-        height: 40
+        x: 100
+        y: 6
+        width: 26
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a1527387852202d0800000000000000
-      internalID: -3314045111835143776
+      spriteID: 9b22b2df3aa07da10800000000000000
+      internalID: 1934026264422326969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left Attack Mini Skeleton-Sheet_4
+      name: Slime-Sheet_4
       rect:
         serializedVersion: 2
-        x: 202
-        y: 8
-        width: 39
-        height: 32
+        x: 132
+        y: 5
+        width: 26
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +230,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4df8516163f8e4f0800000000000000
-      internalID: -799121334287663797
+      spriteID: 79d03636a6a4520d0800000000000000
+      internalID: -3448268118887821929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left Attack Mini Skeleton-Sheet_5
+      name: Slime-Sheet_5
       rect:
         serializedVersion: 2
-        x: 252
-        y: 7
-        width: 39
-        height: 33
+        x: 164
+        y: 4
+        width: 26
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,20 +252,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 229b14bacc3eb23a0800000000000000
-      internalID: -6689002353342695134
+      spriteID: 6d7eaa9620f52d6e0800000000000000
+      internalID: -1814283235909507114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left Attack Mini Skeleton-Sheet_6
+      name: Slime-Sheet_6
       rect:
         serializedVersion: 2
-        x: 302
-        y: 7
-        width: 39
-        height: 33
+        x: 196
+        y: 4
+        width: 26
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +274,74 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9d3a2df16f393de0800000000000000
-      internalID: -1352980522956341862
+      spriteID: e9e76634701316d90800000000000000
+      internalID: -7106344829748609378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 4
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bae451653e635dd0800000000000000
+      internalID: -2498532192715216201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 6
+        width: 26
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a00990404d0db2c40800000000000000
+      internalID: 5488710179900461066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 10
+        width: 23
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d26ffbb59e792b0800000000000000
+      internalID: -5577733033203192419
       vertices: []
       indices: 
       edges: []
@@ -285,13 +360,16 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Left Attack Mini Skeleton-Sheet_0: -6203835159582393512
-      Left Attack Mini Skeleton-Sheet_1: 1209651020899897404
-      Left Attack Mini Skeleton-Sheet_2: -5934172861459417947
-      Left Attack Mini Skeleton-Sheet_3: -3314045111835143776
-      Left Attack Mini Skeleton-Sheet_4: -799121334287663797
-      Left Attack Mini Skeleton-Sheet_5: -6689002353342695134
-      Left Attack Mini Skeleton-Sheet_6: -1352980522956341862
+      Slime-Sheet_0: 7970909259963184619
+      Slime-Sheet_1: 364558614396161899
+      Slime-Sheet_2: 5765889574378607175
+      Slime-Sheet_3: 1934026264422326969
+      Slime-Sheet_4: -3448268118887821929
+      Slime-Sheet_5: -1814283235909507114
+      Slime-Sheet_6: -7106344829748609378
+      Slime-Sheet_7: -2498532192715216201
+      Slime-Sheet_8: 5488710179900461066
+      Slime-Sheet_9: -5577733033203192419
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

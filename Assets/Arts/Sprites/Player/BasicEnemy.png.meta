@@ -1,28 +1,25 @@
 fileFormatVersion: 2
-guid: 8dd5340542f8d494e8f46c1252db8e36
+guid: 721c03ec62d3c6941914a68fece66030
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6203835159582393512
-    second: Left Attack Mini Skeleton-Sheet_0
+      213: 1702279688969781617
+    second: BasicEnemy_0
   - first:
-      213: 1209651020899897404
-    second: Left Attack Mini Skeleton-Sheet_1
+      213: -1167993931104646600
+    second: BasicEnemy_1
   - first:
-      213: -5934172861459417947
-    second: Left Attack Mini Skeleton-Sheet_2
+      213: 8770043384459367301
+    second: BasicEnemy_2
   - first:
-      213: -3314045111835143776
-    second: Left Attack Mini Skeleton-Sheet_3
+      213: -8272243146081703319
+    second: BasicEnemy_3
   - first:
-      213: -799121334287663797
-    second: Left Attack Mini Skeleton-Sheet_4
+      213: 5225461376936292303
+    second: BasicEnemy_4
   - first:
-      213: -6689002353342695134
-    second: Left Attack Mini Skeleton-Sheet_5
-  - first:
-      213: -1352980522956341862
-    second: Left Attack Mini Skeleton-Sheet_6
+      213: -2395097988536658720
+    second: BasicEnemy_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -69,7 +66,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -93,7 +90,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -118,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Left Attack Mini Skeleton-Sheet_0
+      name: BasicEnemy_0
       rect:
         serializedVersion: 2
-        x: 14
-        y: 8
-        width: 27
-        height: 42
+        x: 9
+        y: 5
+        width: 15
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,20 +130,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 85b330caacc87e9a0800000000000000
-      internalID: -6203835159582393512
+      spriteID: 1710869ab56bf9710800000000000000
+      internalID: 1702279688969781617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left Attack Mini Skeleton-Sheet_1
+      name: BasicEnemy_1
       rect:
         serializedVersion: 2
-        x: 65
-        y: 8
-        width: 27
-        height: 41
+        x: 42
+        y: 4
+        width: 14
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c305deac13b89c010800000000000000
-      internalID: 1209651020899897404
+      spriteID: 83a02bc35b37acfe0800000000000000
+      internalID: -1167993931104646600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left Attack Mini Skeleton-Sheet_2
+      name: BasicEnemy_2
       rect:
         serializedVersion: 2
-        x: 111
-        y: 8
-        width: 31
-        height: 42
+        x: 74
+        y: 3
+        width: 14
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,20 +174,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5a4b2fc193595ada0800000000000000
-      internalID: -5934172861459417947
+      spriteID: 58317731ef375b970800000000000000
+      internalID: 8770043384459367301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left Attack Mini Skeleton-Sheet_3
+      name: BasicEnemy_3
       rect:
         serializedVersion: 2
-        x: 151
-        y: 8
-        width: 39
-        height: 40
+        x: 106
+        y: 5
+        width: 14
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -199,20 +196,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a1527387852202d0800000000000000
-      internalID: -3314045111835143776
+      spriteID: 96ae326dfa6133d80800000000000000
+      internalID: -8272243146081703319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left Attack Mini Skeleton-Sheet_4
+      name: BasicEnemy_4
       rect:
         serializedVersion: 2
-        x: 202
-        y: 8
-        width: 39
-        height: 32
+        x: 138
+        y: 4
+        width: 14
+        height: 20
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +218,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b4df8516163f8e4f0800000000000000
-      internalID: -799121334287663797
+      spriteID: fcfafc7cf61948840800000000000000
+      internalID: 5225461376936292303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Left Attack Mini Skeleton-Sheet_5
+      name: BasicEnemy_5
       rect:
         serializedVersion: 2
-        x: 252
-        y: 7
-        width: 39
-        height: 33
+        x: 170
+        y: 3
+        width: 14
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,30 +240,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 229b14bacc3eb23a0800000000000000
-      internalID: -6689002353342695134
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Left Attack Mini Skeleton-Sheet_6
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 7
-        width: 39
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a9d3a2df16f393de0800000000000000
-      internalID: -1352980522956341862
+      spriteID: 0e41507b117e2ced0800000000000000
+      internalID: -2395097988536658720
       vertices: []
       indices: 
       edges: []
@@ -285,13 +260,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Left Attack Mini Skeleton-Sheet_0: -6203835159582393512
-      Left Attack Mini Skeleton-Sheet_1: 1209651020899897404
-      Left Attack Mini Skeleton-Sheet_2: -5934172861459417947
-      Left Attack Mini Skeleton-Sheet_3: -3314045111835143776
-      Left Attack Mini Skeleton-Sheet_4: -799121334287663797
-      Left Attack Mini Skeleton-Sheet_5: -6689002353342695134
-      Left Attack Mini Skeleton-Sheet_6: -1352980522956341862
+      BasicEnemy_0: 1702279688969781617
+      BasicEnemy_1: -1167993931104646600
+      BasicEnemy_2: 8770043384459367301
+      BasicEnemy_3: -8272243146081703319
+      BasicEnemy_4: 5225461376936292303
+      BasicEnemy_5: -2395097988536658720
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
