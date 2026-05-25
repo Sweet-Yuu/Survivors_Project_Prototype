@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 019ec425526ab0c429ce3c971beb3a7b, type: 3}
   m_Name: playerData
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
-  maxHealth: 100
-  moveSpeed: 6
-  maxDef: 10
+  maxHealth: 125
+  damage: 11
+  attackSpd: 5
+  critChance: 20
+  critDmg: 10
+  maxDef: 20
+  moveSpeed: 5
   dashDuration: 0.27
   dashSpeed: 23
   dashCooldown: 3
