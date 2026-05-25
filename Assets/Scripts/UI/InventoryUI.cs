@@ -3,26 +3,44 @@ using UnityEngine.UI;
 
 public class InventoryUI : MonoBehaviour
 {
-    
-    public Image inventoryUI;
 
+    [Header("UI Elements")]
+    [SerializeField] private GameObject inventoryUIPanel;
+    private bool isUIActive = false;
     private void Awake()
     {
         
-        inventoryUI.gameObject.SetActive(false);
+        if (inventoryUIPanel != null)
+        {
+            inventoryUIPanel.SetActive(false);
+            isUIActive = false;
+        }
     }
+
     private void Update()
     {
+        
         if (Player.Instance.InputHandler.informationInput)
         {
             
-            inventoryUI.gameObject.SetActive(true);
-        }
-        else
-        {
-            inventoryUI.gameObject.SetActive(false);
-        }
+            isUIActive = !isUIActive;
 
-        
+            inventoryUIPanel.SetActive(isUIActive);
+
+            if (isUIActive)
+            {
+                Time.timeScale = 0f; 
+            }
+            else
+            {
+                Time.timeScale = 1f; 
+            }
+
+            Player.Instance.InputHandler.UseInformationInput();
+        }
+    }
+    private void OnDisable()
+    {
+        Time.timeScale = 1f;
     }
 }

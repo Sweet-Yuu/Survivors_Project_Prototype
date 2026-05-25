@@ -76,6 +76,10 @@ public class PlayerInputHandler : MonoBehaviour
     {
         interactInput = false;
     }
+    public void UseInformationInput()
+    {
+        informationInput = false;
+    }
 
     private bool UpdateMouseDirection()
     {
