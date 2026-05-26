@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1cbf13abfd010d44c90ad35cd68f6f6b, type: 3}
+  m_Name: SkeletonData
+  m_EditorClassIdentifier: Assembly-CSharp::SkeletonData
+  enemyName: Skeleton
+  maxHealth: 100
+  moveSpeed: 3.5
+  attackRange: 1
+  damage: 20
+  experiencePrefab: {fileID: 6285694553351653017, guid: 6b40c18a223ea9749a4c0cbcededfdb8, type: 3}

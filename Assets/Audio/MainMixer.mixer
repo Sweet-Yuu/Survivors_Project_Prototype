@@ -20,7 +20,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Hi\u1EC7u \u1EE9ng"
+  m_Name: SFX
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: e36a8f3e915170c4d8146c49610e5efe
   m_Children: []
@@ -63,12 +63,12 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
-  - guid: 380dc3aa517f1c947a81e5a25c5fcb1d
-    name: SFXVoice
-  - guid: 31b3a15a4328b174189a8cd07b5a0525
-    name: MasterVoice
   - guid: ebce639445b0f1c40807d09a22296546
-    name: MusicVoice
+    name: BGM
+  - guid: 31b3a15a4328b174189a8cd07b5a0525
+    name: Master
+  - guid: 380dc3aa517f1c947a81e5a25c5fcb1d
+    name: SFX
   m_AudioMixerGroupViews:
   - guids:
     - fe5e5205be186b34bb6cc950ff8e925e
@@ -129,7 +129,7 @@ AudioMixerGroupController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Nh\u1EA1c n\u1EC1n"
+  m_Name: BGM
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: c580b349a57874b4582deb2810e1959f
   m_Children: []

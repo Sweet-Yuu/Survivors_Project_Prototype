@@ -11,6 +11,7 @@ public class PlayerInputHandler : MonoBehaviour
     public bool dashInput { get; private set; }
     public bool interactInput { get; private set; }
     public bool informationInput { get; private set; }
+    public bool pauseInput { get; private set; }
 
 
     private Camera cam;
@@ -67,6 +68,17 @@ public class PlayerInputHandler : MonoBehaviour
             informationInput = false;
         }
     }
+    public void OnPauseInput(InputAction.CallbackContext context)
+    {
+        if (context.started || context.performed)
+        {
+            pauseInput = true;
+        }
+        else if (context.canceled)
+        {
+            pauseInput = false;
+        }
+    }
 
     public void UseDashInput()
     {
@@ -76,12 +88,20 @@ public class PlayerInputHandler : MonoBehaviour
     {
         interactInput = false;
     }
+    public void UseInformationInput()
+    {
+        informationInput = false;
+    }
+    public void UsePauseInput()
+    {
+        pauseInput=false;
+    }
 
     private bool UpdateMouseDirection()
     {
         
         
-            Debug.Log("Mouse Screen Position: " + mouseScreenPosition);
+            
             Vector3 mouseWorldPos =
                             cam.ScreenToWorldPoint(mouseScreenPosition);
 

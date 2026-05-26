@@ -13,8 +13,12 @@ MonoBehaviour:
   m_Name: playerData
   m_EditorClassIdentifier: Assembly-CSharp::PlayerData
   maxHealth: 100
-  moveSpeed: 6
-  maxDef: 10
+  damage: 25
+  attackSpd: 5
+  critChance: 5
+  critDmg: 100
+  maxDef: 0
+  moveSpeed: 5
   dashDuration: 0.27
   dashSpeed: 23
-  dashCooldown: 3
+  dashCooldown: 2

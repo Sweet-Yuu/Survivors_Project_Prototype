@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934de130e2188984f9259dfd5d4de299, type: 3}
+  m_Name: Move_up_red
+  m_EditorClassIdentifier: Assembly-CSharp::StatCardData
+  upgradeName: Sonic Surge
+  description: <size=90%>Blinks through the battlefield with <color=#DA70D6>+1.5</color>
+    bonus movement speed.</size>
+  icon: {fileID: 7652682938272544106, guid: 0c853bcaf0a69e947b69f35d622bed97, type: 3}
+  rarity: 2
+  weight: 5
+  statType: 6
+  upgradeValue: 1.5
