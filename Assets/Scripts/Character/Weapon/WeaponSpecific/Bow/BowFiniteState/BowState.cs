@@ -23,7 +23,7 @@ public class BowState
         DoChecks();
         bow.Anim.SetBool(animBoolName, true);
         startTime = Time.time;
-        Debug.Log(animBoolName);
+       
     }
     public virtual void Exit()
     {

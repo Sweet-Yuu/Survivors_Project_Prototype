@@ -1,14 +1,16 @@
 using UnityEngine;
 
-public class EnemyDieState : EnemyActivityState
+public class EnemyDieState : EnemyState
 {
     private SpriteRenderer spriteRenderer;
     private float dieStartTime;
 
-     private float fadeDelay = 2f;
-     private float fadeDuration = 4f;
+    private float fadeDelay = 2f;
+    private float fadeDuration = 4f;
     private bool hasSpawnedExp = false;
-    public EnemyDieState(Enemy enemy, EnemyStateMachine stateMachine, EnemyData enemyData, string animBoolName) : base(enemy, stateMachine, enemyData, animBoolName)
+
+    public EnemyDieState(Enemy enemy, EnemyStateMachine stateMachine, EnemyData enemyData, string animBoolName)
+        : base(enemy, stateMachine, enemyData, animBoolName)
     {
     }
 
@@ -20,18 +22,29 @@ public class EnemyDieState : EnemyActivityState
     public override void Enter()
     {
         base.Enter();
+
         enemy.RB.linearVelocity = Vector2.zero;
         dieStartTime = Time.time;
         hasSpawnedExp = false;
+
+        
         Collider2D collider = enemy.GetComponent<Collider2D>();
         if (collider != null)
         {
             collider.enabled = false;
         }
-        spriteRenderer = enemy.Visual.GetComponentInChildren<SpriteRenderer>();
 
-        enemy.Visual.Anim.SetTrigger("die");
+        
+        if (enemy.AliveGo != null)
+        {
+            spriteRenderer = enemy.AliveGo.GetComponentInChildren<SpriteRenderer>();
+        }
 
+       
+        if (enemy.anim != null)
+        {
+            enemy.anim.SetTrigger("die");
+        }
     }
 
     public override void Exit()
@@ -43,11 +56,12 @@ public class EnemyDieState : EnemyActivityState
     {
         base.LogicUpdate();
         float timePassed = Time.time - dieStartTime;
+
+       
         if (timePassed >= fadeDelay)
         {
             if (spriteRenderer != null)
             {
-                
                 float pct = (timePassed - fadeDelay) / fadeDuration;
                 Color color = spriteRenderer.color;
                 color.a = Mathf.Lerp(1f, 0f, pct);
@@ -55,11 +69,12 @@ public class EnemyDieState : EnemyActivityState
             }
 
             
-            if (timePassed >= (fadeDelay + fadeDuration)-4f)
+            if (timePassed >= fadeDelay + fadeDuration)
             {
-                SpawnExperience();
+                
                 Object.Destroy(enemy.gameObject);
             }
+            SpawnExperience();
         }
     }
 
@@ -67,12 +82,12 @@ public class EnemyDieState : EnemyActivityState
     {
         base.PhysicsUpdate();
     }
+
     private void SpawnExperience()
     {
         if (hasSpawnedExp) return;
         hasSpawnedExp = true;
 
-        
         if (enemy.EnemyData != null && enemy.EnemyData.experiencePrefab != null)
         {
             Object.Instantiate(enemy.EnemyData.experiencePrefab, enemy.transform.position, Quaternion.identity);

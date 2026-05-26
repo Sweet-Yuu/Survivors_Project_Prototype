@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
             spawnPos.z = 0;
 
             Instantiate(portalToSpawn, spawnPos, Quaternion.identity);
-            Debug.Log($"portal {i + 1} type [{portalToSpawn.name}] spawn at: {spawnPos}");
+            
 
             tempPortalList.RemoveAt(randomIndex);
         }

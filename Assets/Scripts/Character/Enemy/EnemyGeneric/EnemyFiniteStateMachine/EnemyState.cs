@@ -20,13 +20,13 @@ public class EnemyState
     public virtual void Enter()
     {
         DoChecks();
-        enemy.Visual.Anim.SetBool(animBoolName, true);
+        enemy.anim.SetBool(animBoolName, true);
         startTime = Time.time;
         
     }
     public virtual void Exit()
     {
-        enemy.Visual.Anim.SetBool(animBoolName, false);
+        enemy.anim.SetBool(animBoolName, false);
     }
     public virtual void LogicUpdate()
     {

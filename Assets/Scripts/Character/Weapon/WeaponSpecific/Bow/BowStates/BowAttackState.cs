@@ -24,8 +24,19 @@ public class BowAttackState : BowActivityState
         base.Enter();
         isAnimationFinished = false;
         bow.BowAttack.ResetCooldown();
-        
-         bow.Anim.SetFloat("animSpeed", bow.BowData.attackSpeed);
+        if (Player.Instance != null)
+        {
+            PlayerStats stats = Player.Instance.GetComponent<PlayerStats>();
+            if (stats != null)
+            {
+              
+                bow.Anim.SetFloat("animSpeed", stats.spd);
+            }
+            else
+            {
+                bow.Anim.SetFloat("animSpeed", Player.Instance.PlayerData.attackSpd);
+            }
+        }
 
     }
 

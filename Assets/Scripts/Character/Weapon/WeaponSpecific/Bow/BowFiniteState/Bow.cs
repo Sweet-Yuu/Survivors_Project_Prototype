@@ -52,8 +52,19 @@ public class Bow : MonoBehaviour
     {
         if (StateMachine.CurrentState == AttackState)
         {
+            if (Player.Instance != null)
+            {
+                
+                float damageToDeal = Player.Instance.CalculateOutputDamage();
 
-            BowAttack.StartAttack();
+               
+                BowAttack.StartAttack(damageToDeal);
+            }
+            else
+            {
+               
+                BowAttack.StartAttack(10f);
+            }
         }
     }
     public void AnimationFinishTrigger()
@@ -63,12 +74,5 @@ public class Bow : MonoBehaviour
             AttackState.isAnimationFinished = true;
         }
     }
-    //public void HideWeapon()
-    //{
-    //    if (spriteRenderer != null) spriteRenderer.enabled = false;
-    //}
-    //    public void ShowWeapon()
-    //    {
-    //        if (spriteRenderer != null) spriteRenderer.enabled = true;
-    //}
+    
 }

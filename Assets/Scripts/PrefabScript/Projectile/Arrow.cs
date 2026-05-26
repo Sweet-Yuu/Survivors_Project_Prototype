@@ -2,36 +2,42 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-    [SerializeField] private float lifetime = 5f;
+    [SerializeField] private float lifetime = 2f;
+    [SerializeField] private float speed = 15f; 
+
     private Rigidbody2D rb;
-    private Bow bow;
+    private float finalDamage;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        bow = GetComponentInParent<Bow>();
     }
 
     private void Start()
     {
+      
+        if (rb != null)
+        {
+            rb.linearVelocity = transform.right * speed;
+        }
+
         Destroy(gameObject, lifetime);
+    }
+
+    public void SetupArrowData(float damage)
+    {
+        finalDamage = damage;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
         {
-            
-            EnemyHealth enemyHealth = collision.GetComponentInParent<EnemyHealth>();
-
-            if (enemyHealth != null)
+            IDamageable damageable = collision.GetComponentInParent<IDamageable>();
+            if (damageable != null)
             {
-                float damage = (bow != null && bow.BowData != null) ? bow.BowData.attackDamage : 10f;
-
-               
-                enemyHealth.TakeDamage(damage, transform.position);
+                damageable.TakeDamage(finalDamage);
             }
-
             Destroy(gameObject);
         }
     }

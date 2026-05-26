@@ -2638,15 +2638,19 @@ MonoBehaviour:
   - waveName: Wave 1
     enemyGroups:
     - enemyName: Skeleton
-      enemyCount: 10
+      enemyCount: 30
+      spawnCount: 0
+      enemyPrefabs: {fileID: 3824161864584219705, guid: 1da8652820ad06b40af4b3aa581dcf8a, type: 3}
+    - enemyName: Skeleton
+      enemyCount: 30
       spawnCount: 0
       enemyPrefabs: {fileID: 3824161864584219705, guid: 1da8652820ad06b40af4b3aa581dcf8a, type: 3}
     waveQuota: 0
-    spawnInterval: 2
+    spawnInterval: 5
     spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
-  maxEnemiesAllowed: 10
+  maxEnemiesAllowed: 60
   maxEnemiesReached: 0
   waveInterval: 3
   relativeSpawnPoint:
@@ -2883,6 +2887,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 24baa47a-ac93-4341-9ca7-bc8407dae135
     m_ActionName: 'Gameplay/Infomation[/Keyboard/tab]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 29ba3f12-ff47-4053-814d-79d264a8c6ac
+    m_ActionName: 'Gameplay/Pause[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -2904,7 +2912,7 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 86f910c4e1b4920488ff1c1da0e09ab3, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -2961,7 +2969,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -162540167
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -6869890601539011960, guid: 5c5d30222d5232b438e270ee2e63ea11, type: 3}
@@ -4541,7 +4549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 172985d786ddd31428c630e947058e6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  score: 20
+  score: 360
   scoreText: {fileID: 318938304}
   portalPrefab:
   - {fileID: 1689004885809143370, guid: 3e680ecb63590b641a1a8d3ffb3a62f1, type: 3}
@@ -8257,7 +8265,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: -824983031
-  m_SortingLayer: 5
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 5249718378156045247, guid: b2286749debfcc64a978c878a28a07ab, type: 3}

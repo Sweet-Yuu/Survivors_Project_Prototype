@@ -4,16 +4,21 @@ using UnityEngine.UI;
 
 public abstract class Enemy : MonoBehaviour
 {
-    public EnemyMoveState MoveState { get; private set; }
-    public EnemyHurtState HurtState { get; private set; }
+
     public EnemyDieState DieState { get; private set; }
 
     public EnemyStateMachine StateMachine { get; private set; }
 
-    public EnemyHealth Health { get; private set; }
+  
 
-    public EnemyVisual Visual { get; private set; }
+   public Animator anim {  get; private set; }  
     public Rigidbody2D RB { get; private set; }
+    public GameObject AliveGo {  get; private set; }
+
+    public int facingDirection{ get; private set; }
+
+    public Vector2 velocityWorkspace;
+
 
     [SerializeField] private EnemyData enemyData;
     public EnemyData EnemyData => enemyData;
@@ -22,29 +27,37 @@ public abstract class Enemy : MonoBehaviour
     public float despawnDistance = 20f;
     Transform _player;
 
-    protected virtual void Awake()
+    public virtual void Awake()
     {
-        Visual = GetComponentInChildren<EnemyVisual>();
+        anim = GetComponentInChildren<Animator>();
+        if (anim != null)
+        {
+            AliveGo = anim.gameObject;
+        }
+        else
+        {
+            Debug.LogError($"Prefab {gameObject.name} null");
+        }
         RB = GetComponent<Rigidbody2D>();
+        AliveGo=transform.Find("Alive").gameObject;
+        facingDirection = 1;
 
-        Health = GetComponent<EnemyHealth>();
+     
 
         StateMachine = new EnemyStateMachine();
 
-        MoveState = new EnemyMoveState(this, StateMachine, EnemyData, "move");
-        HurtState = new EnemyHurtState(this, StateMachine, EnemyData, "hurt");
         DieState = new EnemyDieState(this, StateMachine, EnemyData, "die");
     }
-    protected virtual void Start()
+    public virtual void Start()
     {
         if (Player.Instance != null)
         {
             _player = Player.Instance.transform;
         }
-        StateMachine.Initialize(MoveState);
+        
     }
 
-    private void Update()
+    public virtual void Update()
     {
         if (_player == null) return;
         if (Vector2.Distance(transform.position, _player.position) >= despawnDistance)
@@ -54,9 +67,22 @@ public abstract class Enemy : MonoBehaviour
         StateMachine.CurrentState.LogicUpdate();
     }
 
-    private void FixedUpdate()
+    public virtual void FixedUpdate()
     {
         StateMachine.CurrentState.PhysicsUpdate();
+    }
+
+    public virtual void SetVelocity(float velocity)
+    {
+        velocityWorkspace.Set(facingDirection * velocity,facingDirection *velocity);
+        RB.linearVelocity = velocityWorkspace;
+
+    }
+
+    public virtual void Flip()
+    {
+        facingDirection *= -1;
+        AliveGo.transform.Rotate(0f, 180f, 0f);
     }
 
 

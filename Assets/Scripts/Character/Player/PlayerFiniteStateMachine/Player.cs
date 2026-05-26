@@ -86,4 +86,33 @@ public class Player : MonoBehaviour
     {
         isInvincible = value;
     }
+    
+    public float CalculateOutputDamage()
+    {
+        
+        PlayerStats stats = GetComponent<PlayerStats>();
+
+       
+        if (stats == null)
+        {
+            Debug.LogWarning("PlayerStats null");
+            return PlayerData != null ? PlayerData.damage : 10f;
+        }
+
+        
+        float baseDamage = stats.dmg;
+
+        
+        float roll = Random.Range(0f, 100f);
+        if (roll <= stats.crit)
+        {
+            
+            float criticalDamage = baseDamage * (1f + (stats.critDmg / 100f));
+
+            Debug.Log($"<color=red>[CRITICAL HIT!]</color> Base: {baseDamage} -> Crit: {criticalDamage}");
+            return criticalDamage;
+        }
+
+        return baseDamage;
+    }
 }

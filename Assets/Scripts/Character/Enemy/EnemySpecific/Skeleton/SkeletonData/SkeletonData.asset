@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SkeletonData
   m_EditorClassIdentifier: Assembly-CSharp::SkeletonData
   enemyName: Skeleton
-  maxHealth: 20
-  moveSpeed: 5
-  attackRange: 5
-  damage: 10
+  maxHealth: 100
+  moveSpeed: 3.5
+  attackRange: 1
+  damage: 20
   experiencePrefab: {fileID: 6285694553351653017, guid: 6b40c18a223ea9749a4c0cbcededfdb8, type: 3}
