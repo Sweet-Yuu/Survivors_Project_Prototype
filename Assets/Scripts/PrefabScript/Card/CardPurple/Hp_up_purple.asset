@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934de130e2188984f9259dfd5d4de299, type: 3}
   m_Name: Hp_up_purple
   m_EditorClassIdentifier: Assembly-CSharp::StatCardData
-  upgradeName: HP
-  description: Hp+25
+  upgradeName: Juggernaut's Heart
+  description: <size=90%>Fortifies your life force, granting <color=#1E90FF>+25</color>
+    maximum health.</size>
   icon: {fileID: 8626446949434067282, guid: a122431c67702424c9d4b4b0aef36d58, type: 3}
   rarity: 1
   weight: 25

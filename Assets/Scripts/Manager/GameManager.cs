@@ -2,10 +2,16 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+
+    [Header("Tutorial Settings")]
+    [SerializeField] private GameObject tutorialPanel;
+    [SerializeField] private Button startGameButton;
+    private bool isTutorialActive = true;
 
     [Header("Time Score Settings")]
     [SerializeField] public float score = 60;
@@ -22,29 +28,36 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
-        
     }
+
     private void Start()
     {
-        //Cursor.visible = false;
-        //Cursor.lockState = CursorLockMode.Confined;
+        if (tutorialPanel != null)
+        {
+            tutorialPanel.SetActive(true);
+            isTutorialActive = true;
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            isTutorialActive = false;
+            Time.timeScale = 1f;
+        }
+
+        if (startGameButton != null)
+        {
+            startGameButton.onClick.AddListener(CloseTutorialAndStart);
+        }
     }
 
     private void Update()
     {
-
-        if (isPortalSpawned)
-        {
-            return;
-        }
-        if (Player.IsDead)
-        {
-            return;
-        }
+        if (isTutorialActive) return;
+        if (isPortalSpawned) return;
+        if (Player.IsDead) return;
 
         if (score > 0)
         {
-            
             score -= Time.deltaTime;
             scoreText.text = Mathf.RoundToInt(score).ToString();
 
@@ -59,10 +72,20 @@ public class GameManager : MonoBehaviour
             scoreText.text = "0";
             OnTimeOut();
         }
-        
-        
     }
-    
+
+    void CloseTutorialAndStart()
+    {
+        if (tutorialPanel != null)
+        {
+            tutorialPanel.SetActive(false);
+        }
+
+        Time.timeScale = 1f;
+        isTutorialActive = false;
+
+        startGameButton.onClick.RemoveListener(CloseTutorialAndStart);
+    }
 
     void OnTimeOut()
     {
@@ -113,7 +136,6 @@ public class GameManager : MonoBehaviour
             spawnPos.z = 0;
 
             Instantiate(portalToSpawn, spawnPos, Quaternion.identity);
-            
 
             tempPortalList.RemoveAt(randomIndex);
         }

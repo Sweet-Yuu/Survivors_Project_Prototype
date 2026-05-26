@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934de130e2188984f9259dfd5d4de299, type: 3}
   m_Name: CritDmg_up_red
   m_EditorClassIdentifier: Assembly-CSharp::StatCardData
-  upgradeName: CRIT DMG
-  description: CritDmg+70
+  upgradeName: Heartseeker
+  description: <size=90%>Fatal strikes shatter foes, boosting Critical Damage by
+    <color=#DA70D6>+40%</color>.</size>
   icon: {fileID: 4860897750712593436, guid: 1702b86293a625e4ca498b154d1343cd, type: 3}
   rarity: 2
   weight: 5
   statType: 4
-  upgradeValue: 70
+  upgradeValue: 40

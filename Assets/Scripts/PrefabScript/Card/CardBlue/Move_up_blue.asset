@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934de130e2188984f9259dfd5d4de299, type: 3}
   m_Name: Move_up_blue
   m_EditorClassIdentifier: Assembly-CSharp::StatCardData
-  upgradeName: MOVE SPD
-  description: Move+10
+  upgradeName: Light Steps
+  description: <size=90%>Lightens your gear to increase movement speed by <color=#32CD32>+0.5</color>.</size>
   icon: {fileID: 7652682938272544106, guid: 6392c8588586c0844b0b9364982ef0a3, type: 3}
   rarity: 0
   weight: 70
   statType: 6
-  upgradeValue: 10
+  upgradeValue: 0.5

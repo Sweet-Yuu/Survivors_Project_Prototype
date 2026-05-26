@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UpgradeUI : MonoBehaviour
 {
     public TextMeshProUGUI nameText;
+    public TextMeshProUGUI descriptionText;
     public Image iconImage;
 
     private CardData currentCard;
@@ -17,6 +18,11 @@ public class UpgradeUI : MonoBehaviour
         currentCard = card;
         nameText.text = card.upgradeName;
         iconImage.sprite = card.icon;
+
+        if (descriptionText != null)
+        {
+            descriptionText.text = card.description;
+        }
 
         onCardClicked = onClickCallback;
     }

@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934de130e2188984f9259dfd5d4de299, type: 3}
   m_Name: Def_up_purple
   m_EditorClassIdentifier: Assembly-CSharp::StatCardData
-  upgradeName: DEF
-  description: Def + 20
+  upgradeName: Iron Shell
+  description: <size=90%>Coats your armor in steel, granting <color=#1E90FF>+7</color>
+    bonus defense.</size>
   icon: {fileID: -3393594479042761946, guid: 6e7ba0bc161008f409b141fd5c5df9aa, type: 3}
   rarity: 1
   weight: 25
   statType: 5
-  upgradeValue: 20
+  upgradeValue: 7

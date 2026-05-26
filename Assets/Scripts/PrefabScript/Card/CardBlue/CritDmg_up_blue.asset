@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934de130e2188984f9259dfd5d4de299, type: 3}
   m_Name: CritDmg_up_blue
   m_EditorClassIdentifier: Assembly-CSharp::StatCardData
-  upgradeName: CRIT DMG
-  description: CritDmg+ 10
+  upgradeName: Heavy Impact
+  description: <size=90%>Empowers critical strikes to deal <color=#32CD32>+10%</color>
+    more damage.</size>
   icon: {fileID: 8678355527719855079, guid: 2b2d02f1413cf854681ba21a10d3a30e, type: 3}
   rarity: 0
   weight: 70

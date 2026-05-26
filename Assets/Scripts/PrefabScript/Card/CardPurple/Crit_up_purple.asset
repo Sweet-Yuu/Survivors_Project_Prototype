@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934de130e2188984f9259dfd5d4de299, type: 3}
   m_Name: Crit_up_purple
   m_EditorClassIdentifier: Assembly-CSharp::StatCardData
-  upgradeName: '%CRIT'
-  description: Crit + 20
+  upgradeName: Predator's Instinct
+  description: <size=90%>Exposes enemy weak points, granting <color=#1E90FF>+8%</color>
+    Critical Strike Chance.</size>
   icon: {fileID: -7936339759973458807, guid: 1dda3cde84d80bf46bf88db59f7ff970, type: 3}
   rarity: 1
   weight: 25
   statType: 3
-  upgradeValue: 20
+  upgradeValue: 8

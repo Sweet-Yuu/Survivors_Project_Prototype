@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934de130e2188984f9259dfd5d4de299, type: 3}
   m_Name: Atk_up_purple
   m_EditorClassIdentifier: Assembly-CSharp::StatCardData
-  upgradeName: ATK
-  description: Atk + 20
+  upgradeName: Heavy Draw
+  description: <size=90%>Adds devastating power to your strikes, increasing base
+    damage by <color=#1E90FF>+4</color>.</size>
   icon: {fileID: 4413183947946236502, guid: ce96a79a6915edc4287c32636dd91d6c, type: 3}
   rarity: 1
   weight: 25
   statType: 1
-  upgradeValue: 20
+  upgradeValue: 4

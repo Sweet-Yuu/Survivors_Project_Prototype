@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934de130e2188984f9259dfd5d4de299, type: 3}
   m_Name: Def_up_blue
   m_EditorClassIdentifier: Assembly-CSharp::StatCardData
-  upgradeName: DEF
-  description: Def + 10
+  upgradeName: Hardened Leather
+  description: <size=90%>Reinforces your defense, mitigating incoming damage by <color=#32CD32>+4</color>
+    defense.</size>
   icon: {fileID: -3393594479042761946, guid: 6c48416ce8c711b41942389e3dddeaf7, type: 3}
   rarity: 0
   weight: 70
   statType: 5
-  upgradeValue: 10
+  upgradeValue: 4

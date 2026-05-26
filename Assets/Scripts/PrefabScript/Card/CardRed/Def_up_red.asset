@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934de130e2188984f9259dfd5d4de299, type: 3}
   m_Name: Def_up_red
   m_EditorClassIdentifier: Assembly-CSharp::StatCardData
-  upgradeName: DEF
-  description: Def + 70
+  upgradeName: Aegis Shield
+  description: <size=90%>Surrounds you with an unbreakable barrier, surging defense
+    by <color=#DA70D6>+12</color>.</size>
   icon: {fileID: -3393594479042761946, guid: fe1ff5635a09bcf418e6954c9229aaf8, type: 3}
   rarity: 2
   weight: 5
   statType: 5
-  upgradeValue: 70
+  upgradeValue: 12

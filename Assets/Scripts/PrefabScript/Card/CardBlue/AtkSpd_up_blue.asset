@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934de130e2188984f9259dfd5d4de299, type: 3}
   m_Name: AtkSpd_up_blue
   m_EditorClassIdentifier: Assembly-CSharp::StatCardData
-  upgradeName: ATK SPD
-  description: Spd + 10
+  upgradeName: Quick Draw
+  description: <size=90%>Increases weapon handling and attack speed by <color=#32CD32>+0.1</color>.</size>
   icon: {fileID: 5978605581115499656, guid: cf48a455594a4964996842c2e84c3a98, type: 3}
   rarity: 0
   weight: 70
   statType: 2
-  upgradeValue: 10
+  upgradeValue: 0.1

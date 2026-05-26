@@ -67,8 +67,7 @@ public class PlayerHealth : MonoBehaviour, IDamageable
         {
             hasSpawnedBloodInThisHit = true;
             GameObject bloodStain = Instantiate(bloodStainPrefab, transform.position, Quaternion.identity);
-            float randomRotation = UnityEngine.Random.Range(0f, 360f);
-            bloodStain.transform.rotation = Quaternion.Euler(0f, 0f, randomRotation);
+            bloodStain.transform.position += Vector3.down * 0.8f;
         }
     }
 }

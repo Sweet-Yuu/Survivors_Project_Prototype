@@ -26,7 +26,7 @@ public abstract class EnemyHealth : MonoBehaviour, IDamageable
         if (currentHealth <= 0) return;
 
         currentHealth -= damage;
-        Debug.Log(damage +"to Enemy");
+       
         
 
        

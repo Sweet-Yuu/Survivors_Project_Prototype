@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934de130e2188984f9259dfd5d4de299, type: 3}
   m_Name: Move_up_purple
   m_EditorClassIdentifier: Assembly-CSharp::StatCardData
-  upgradeName: MOVE SPD
-  description: Move+20
+  upgradeName: Fleet Footed
+  description: <size=90%>Enhances agility, granting <color=#1E90FF>+0.8</color> movement
+    speed.</size>
   icon: {fileID: 7652682938272544106, guid: 3f75d26dcf254584e802ac82996a6d31, type: 3}
   rarity: 1
   weight: 25
   statType: 6
-  upgradeValue: 20
+  upgradeValue: 0.8

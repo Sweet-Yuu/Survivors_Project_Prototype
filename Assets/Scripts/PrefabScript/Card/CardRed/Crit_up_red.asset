@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934de130e2188984f9259dfd5d4de299, type: 3}
   m_Name: Crit_up_red
   m_EditorClassIdentifier: Assembly-CSharp::StatCardData
-  upgradeName: '%Crit'
-  description: Crit+70
+  upgradeName: Eagle Eyed
+  description: <size=90%>Guarantees precision strikes by boosting Critical Strike
+    Chance by <color=#DA70D6>+15%</color>.</size>
   icon: {fileID: -7936339759973458807, guid: a7a8c639f843c4443956f0090c982357, type: 3}
   rarity: 2
   weight: 5
   statType: 3
-  upgradeValue: 70
+  upgradeValue: 15

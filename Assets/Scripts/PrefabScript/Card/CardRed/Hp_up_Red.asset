@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 934de130e2188984f9259dfd5d4de299, type: 3}
   m_Name: Hp_up_Red
   m_EditorClassIdentifier: Assembly-CSharp::StatCardData
-  upgradeName: HP
-  description: Hp+70
+  upgradeName: Immortal Essence
+  description: <size=90%>Channels ancient energy to expand your max health by <color=#DA70D6>+40</color>.</size>
   icon: {fileID: -902086654454736923, guid: ad5bb21f1770793409851295bf72cdb5, type: 3}
   rarity: 2
   weight: 5
   statType: 0
-  upgradeValue: 70
+  upgradeValue: 40
