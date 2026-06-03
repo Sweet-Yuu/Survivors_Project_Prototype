@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public PlayerMovement Movement { get; private set; }
+   
     public PlayerHealth Health { get; private set; }
     public PlayerDash Dash { get; private set; }
     public PlayerExperience Experience { get; private set; }
@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
 
 
     public PlayerStateMachine StateMachine { get; private set; }
+
+
 
     public PlayerIdleState IdleState { get; private set; }
     public PlayerMoveState MoveState { get; private set; }
@@ -26,25 +28,24 @@ public class Player : MonoBehaviour
     public static bool IsDead = false;
 
     public static Player Instance { get; private set; }
-    public Bow bow;
-
 
     [SerializeField] private PlayerData playerData;
     public PlayerData PlayerData => playerData;
 
-    [SerializeField] private Bow activeBow;
+    public PlayerStats playerStats {  get; private set; }
     
 
     private void Awake()
     {
         Instance = this;
-        Anim = GetComponent<Animator>();
+        Anim = GetComponentInChildren<Animator>();
+        playerStats = GetComponent<PlayerStats>();
 
         InputHandler = GetComponent<PlayerInputHandler>();
 
         RB = GetComponent<Rigidbody2D>();
 
-        Movement = GetComponent<PlayerMovement>();
+     
         Health = GetComponent<PlayerHealth>();
         Dash = GetComponent<PlayerDash>();
         Experience = GetComponent<PlayerExperience>();
@@ -89,25 +90,22 @@ public class Player : MonoBehaviour
     
     public float CalculateOutputDamage()
     {
-        
-        PlayerStats stats = GetComponent<PlayerStats>();
 
-       
-        if (stats == null)
+        if (playerStats == null)
         {
             Debug.LogWarning("PlayerStats null");
             return PlayerData != null ? PlayerData.damage : 10f;
         }
 
         
-        float baseDamage = stats.dmg;
+        float baseDamage = playerStats.dmg;
 
         
         float roll = Random.Range(0f, 100f);
-        if (roll <= stats.crit)
+        if (roll <= playerStats.crit)
         {
             
-            float criticalDamage = baseDamage * (1f + (stats.critDmg / 100f));
+            float criticalDamage = baseDamage * (1f + (playerStats.critDmg / 100f));
 
             Debug.Log($"<color=red>[CRITICAL HIT!]</color> Base: {baseDamage} -> Crit: {criticalDamage}");
             return criticalDamage;

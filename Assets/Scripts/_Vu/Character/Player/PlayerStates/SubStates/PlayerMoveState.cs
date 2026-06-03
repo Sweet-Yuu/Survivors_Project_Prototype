@@ -1,7 +1,7 @@
 
 using UnityEngine;
 
-public class PlayerMoveState : PlayerGroundedState
+public class PlayerMoveState : PlayerState
 {
     public PlayerMoveState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
@@ -25,11 +25,7 @@ public class PlayerMoveState : PlayerGroundedState
     public override void LogicUpdate()
     {
         base.LogicUpdate();
-
         Vector2 input = player.InputHandler.movementInput;
-
-        player.Movement.Move(input);
-
         if (input != Vector2.zero)
         {
             player.LastInput = input;
@@ -51,7 +47,8 @@ public class PlayerMoveState : PlayerGroundedState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-        player.Movement.Move(input);
+        Vector2 input = player.InputHandler.movementInput;
+        player.RB.linearVelocity = input.normalized * player.playerStats.move;
         
     }
 }

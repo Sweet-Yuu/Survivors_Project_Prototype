@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerIdleState : PlayerGroundedState
+public class PlayerIdleState : PlayerState
 {
     public PlayerIdleState(Player player, PlayerStateMachine stateMachine, PlayerData playerData, string animBoolName) : base(player, stateMachine, playerData, animBoolName)
     {
@@ -15,7 +15,7 @@ public class PlayerIdleState : PlayerGroundedState
     {
         base.Enter();
 
-        player.Movement.Stop();
+        player.RB.linearVelocity = Vector2.zero;
 
         player.Anim.SetFloat("speed", 0f);
         player.Anim.SetFloat("lastInputX", player.LastInput.x);
@@ -43,6 +43,5 @@ public class PlayerIdleState : PlayerGroundedState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
-        player.Movement.Stop();
     }
 }
