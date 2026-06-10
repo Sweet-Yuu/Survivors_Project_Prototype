@@ -4837,7 +4837,9 @@ MonoBehaviour:
   critDmg: 0
   def: 0
   move: 0
-  metaUpgradeData: {fileID: 11400000, guid: efd9e4c7963b4dc42b2866b9fb88ccf4, type: 2}
+  hpUpgradeNode: {fileID: 0}
+  dmgUpgradeNode: {fileID: 0}
+  defUpgradeNode: {fileID: 0}
 --- !u!1 &712427840
 GameObject:
   m_ObjectHideFlags: 0
@@ -7517,6 +7519,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1541299089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1032286644
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1032286645}
+  - component: {fileID: 1032286646}
+  m_Layer: 0
+  m_Name: MetaProgressManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1032286645
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032286644}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1541299089}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1032286646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032286644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d26fda3d9429340b386f53873782ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MetaProgressManager
+  totalRewardPoints: 0
 --- !u!1 &1063376867
 GameObject:
   m_ObjectHideFlags: 0
@@ -11076,6 +11123,7 @@ Transform:
   - {fileID: 671248203}
   - {fileID: 2035128348}
   - {fileID: 173682965}
+  - {fileID: 1032286645}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1558570146

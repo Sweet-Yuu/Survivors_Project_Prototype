@@ -27,28 +27,20 @@ public class PlayerDieState : PlayerState
        
 
         GameManager.Instance.ClearAllEnemies();
-        // ---------------------------------------------------------
-        // BẮT ĐẦU PHẦN CODE BỔ SUNG CHO META PROGRESSION TẠI ĐÂY
-        // ---------------------------------------------------------
 
-        // 1. Gọi MetaProgressionManager để lưu trữ lại số "Điểm thưởng Data" mà người chơi vừa nhặt được trong run này.
-        if (MetaProgressionManager.Instance != null)
+        // ---------------------------------------------------------
+        // HỆ THỐNG LƯU TRỮ KHI CHẾT
+        // ---------------------------------------------------------
+        if (MetaProgressManager.Instance != null)
         {
-            // Giả sử lấy điểm từ PlayerExperience hoặc kho tạm nào đó
-            // MetaProgressionManager.Instance.AddDataPoints(player.Experience.currentExp);
-            MetaProgressionManager.Instance.SaveData();
-        }
+            // Giả sử lấy điểm từ PlayerExperience của run hiện tại để cộng vào
+            // MetaProgressManager.Instance.AddRewardPoints(player.Experience.Điểm_Vừa_Kiếm_Được); 
 
-        // 2. Tương tác với chỉ số (Nếu muốn test trực tiếp không qua UI)
-        if (player.playerStats is PlayerMetaStats metaStats)
-        {
-            // metaStats.MetaUpgradeData.dmgLevel++;
-            // metaStats.MetaUpgradeData.SaveUpgrades(); 
+            // Gọi Save khi màn hình Death Screen chuẩn bị xuất hiện
+            MetaProgressManager.Instance.SaveData();
         }
+        // ---------------------------------------------------------
 
-        // ---------------------------------------------------------
-        // KẾT THÚC PHẦN CODE BỔ SUNG
-        // ---------------------------------------------------------
         player.StartCoroutine(ShowGameOver());
     }
 
