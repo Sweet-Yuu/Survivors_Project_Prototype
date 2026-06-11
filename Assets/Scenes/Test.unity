@@ -11932,9 +11932,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c44cfab34fefd440975d5dd68f16db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SupportWeaponController
-  weaponData: {fileID: 11400000, guid: 682b5a5ebf3a4f0479bce54b36f4ca92, type: 2}
-  firePoint: {fileID: 1832316797}
-  enemyLayer:
+  <WeaponData>k__BackingField: {fileID: 11400000, guid: 682b5a5ebf3a4f0479bce54b36f4ca92, type: 2}
+  <FirePoint>k__BackingField: {fileID: 1832316797}
+  <EnemyLayer>k__BackingField:
     serializedVersion: 2
     m_Bits: 8
 --- !u!1 &1847242948

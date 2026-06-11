@@ -10,6 +10,8 @@ public class SupportWeaponDataSO : ScriptableObject
     public float attackRange = 8f;
     public float projectileSpeed = 10f;
 
+    public int projectileCount = 1;
+
     [Header("Visuals")]
     public GameObject projectilePrefab;
 }

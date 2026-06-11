@@ -17,4 +17,5 @@ MonoBehaviour:
   fireRate: 1
   attackRange: 8
   projectileSpeed: 10
+  projectileCount: 3
   projectilePrefab: {fileID: 3577419979333209398, guid: eff697f6b46a7634b8bdb93945977d1d, type: 3}
