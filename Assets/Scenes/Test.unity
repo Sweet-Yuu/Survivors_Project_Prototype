@@ -11920,6 +11920,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91efdedf9e98739469d35e7312a660df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileAttackStrategy
+  spreadAngle: 20
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &1832316799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11932,7 +11936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c44cfab34fefd440975d5dd68f16db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SupportWeaponController
-  <WeaponData>k__BackingField: {fileID: 11400000, guid: 682b5a5ebf3a4f0479bce54b36f4ca92, type: 2}
+  <WeaponData>k__BackingField: {fileID: 11400000, guid: fde8a5746dacf30459268a85c9993374, type: 2}
   <FirePoint>k__BackingField: {fileID: 1832316797}
   <EnemyLayer>k__BackingField:
     serializedVersion: 2

@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3426e27bf5223b4dbfab620c805fcc9, type: 3}
-  m_Name: Data_Fireball
+  m_Name: Aura
   m_EditorClassIdentifier: Assembly-CSharp::SupportWeaponDataSO
-  weaponName: Fireball
+  weaponName: Aura
   damage: 100
   fireRate: 1
-  attackRange: 8
+  attackRange: 1
   projectileSpeed: 10
-  projectileCount: 2
-  projectilePrefab: {fileID: 3577419979333209398, guid: eff697f6b46a7634b8bdb93945977d1d, type: 3}
+  projectileCount: 1
+  projectilePrefab: {fileID: 8754353315639894064, guid: 9fdd949bb19c6214ebcff9431498bd6e, type: 3}
