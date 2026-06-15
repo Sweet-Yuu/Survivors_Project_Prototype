@@ -7,7 +7,6 @@ public class MetaProgressManager : MonoBehaviour
 
     [Header("Quỹ Điểm Thưởng")]
     public int totalRewardPoints;
-
     private void Awake()
     {
         // Đảm bảo chỉ có 1 Manager tồn tại xuyên suốt các màn chơi
@@ -22,7 +21,6 @@ public class MetaProgressManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     // Hàm cộng tiền vào quỹ
     public void AddRewardPoints(int points)
     {
